@@ -1,0 +1,31 @@
+site_name: IT50
+
+theme:
+  name: material
+  features:
+    - navigaion.instant
+    - navigation.tabs
+    - navigation.indexes
+  palette:
+    - scheme: it50
+  logo: assets/icon.svg
+  favicon: assets/icon.svg
+  font:
+    text: Mukta
+
+nav:
+  - About: en/index.md
+  - Book:
+    - Introduction: en/Introduction.md
+    - Data: en/Data.md
+    - Text Encoding: en/Text Encoding.md
+
+extra_css:
+  - /stylesheets/features.css
+  - /stylesheets/dimensions.css
+  - /stylesheets/colors.css
+
+markdown_extensions:
+  - extra
+  - meta
+  - def_list
