@@ -1,7 +1,3 @@
-.md-content {
-  max-width: 7.2in;
-}
-
 @media screen and (min-width: 44.9375em) and (max-width: 76.1875em) {
   .md-content {
     margin-left: 56px;
