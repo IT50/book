@@ -1,12 +1,11 @@
 lm::before{
   color: var(--md-default-bg-color);
   font-weight: 600;
-  font-size: 10pt;
+  font-size: 80%;
   border-radius: 999ch;
   margin-inline: 0ch 0.6ch;
   padding: 0pt 0.6ch 0pt 0.6ch;
   display: inline;
-  /* vertical-align: middle; */
   text-transform: uppercase;
   -webkit-user-select: none;
   -moz-user-select: none;
