@@ -22,15 +22,20 @@ Today's computers know bytes inherently. Computers process a multitude of bytes 
 
 A byte can be written as a two-digit hexadecimal number that can be directly converted from its binary representation. For example, `11100100` will be represented as `E4` (by convention, with prefix `0x` if ambiguous).
 
-An **address** is a number used to specify a location in raw data storage. It is a convention that we count the address from zero, and this has an advantage that we will talk about later.
+An **address** is a number used to specify a location in raw data. It is a convention that we count the address from zero, and this has an advantage that we will talk about later.
 
-The address is often defined sequentially to bytes. In this way, we nicely format the example:
+The address is often defined sequentially to each byte. In this way, we nicely format the example:
 
-```
-Address             0        1        2        3        4        5        6        7
-Data (binary)       00000110 00001000 00001011 01000100 11100010 10101010 10101011 01001101
-Data (hexadecimal)  06       08       0B       44       E2       AA       AB       4D
-```
+| Byte address | Data (binary) | Data (hexadecimal) |
+| ------------ | ------------- | ------------------ |
+| `0`          | `00000110`    | `06`               |
+| `1`          | `00001000`    | `08`               |
+| `2`          | `00001011`    | `0B`               |
+| `3`          | `01000100`    | `44`               |
+| `4`          | `11100010`    | `E2`               |
+| `5`          | `10101010`    | `AA`               |
+| `6`          | `10101011`    | `AB`               |
+| `7`          | `01001101`    | `4D`               |
 
 ## Data is disorganized
 
@@ -83,7 +88,7 @@ Unfortunately, for now in this book, no one can tell if this data means a list o
 |     255 |     `11111111` |
 |     256 | `1` `00000000` |
 
-Note where the binary number bumps to the 7th and 9th place. Because there are so many advantages to keep the length of data the same, we want to use all the 2⁸ = 256 possible values in an 8-bit piece of data. We have to use this combination of all zeroes in order to use all of the 256 combinations.
+Note where the binary number bumps to the 7th and 9th place. Because there are so many advantages to keep the length of data the same, we want to use all the 2⁸ = 256 possible values in an 8-bit piece of data. We have to use this combination of all zeros in order to use all of the 256 combinations.
 
 ## Units
 
