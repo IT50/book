@@ -25,39 +25,37 @@ Asymmetric encryption has a pair of keys. When one of the keys is used to encryp
 
 Usually, one key is made public and the other is kept private. This design allows secure communication.
 
-Asymmetrical encryption is mathematically similar to signing. They were actually born at the same time.
-
 ### Ideal workflow
 
-- Everyone knows everyone's public key.
+- Everyone knows everyone’s public key.
 - Alice has the original data.
-- Alice encrypts the original data with Bob's public key.
+- Alice encrypts the original data with Bob’s public key.
 - Alice sends the encrypted data to Bob.
 - Bob decrypts the data with his private key.
 - Bob has the original data.
 
 Note that Alice does not encrypt with her own private key, or anyone who has access to the encrypted data would be able decrypt it.
 
-However, in the real world we can't possibly know everyone's public key. The key has to be shared at the start of the connection. In this situation, the connection bearer can always perform a **man-in-the-middle (MITM)** attack. The next section shows how such attack works. The world currently has a widely used (and *pretty* solid) way to prevent MITM attacks, and we will talk about that in the Signing and CA chapter.
+However, in the real world it is not practical to know everyone’s public key. The key has to be shared at the start of the connection. In this situation, the connection bearer can always perform a **man-in-the-middle (MITM)** attack. The next section shows how such attack works. The world currently has a widely used (and *pretty* solid) way to prevent MITM attacks, and we will talk about that in the Signing and CA chapter.
 
 ### Workflow with in-time key sharing and MITM attack
 
 - Alice has the original data.
-- Alice requests Bob for his public key and this request ended up in Charles' hand.
+- Alice requests Bob for his public key and this request ended up in Charles’ hand.
 - Charles requests Bob for his public key. Bob responds with his public key.
 - Charles responds Alice with his own public key.
-- Alice encrypts the original data with Charles's public key.
-- Alice sends the encrypted data to Bob and it ended up in Charles' hand.
+- Alice encrypts the original data with Charles’s public key.
+- Alice sends the encrypted data to Bob and it ended up in Charles’ hand.
 - Charles decrypts the data with his private key.
 - Charles has the original data.
 - Charles optionally modifies the original data.
-- Charles encrypts the original data with Bob's public key.
+- Charles encrypts the original data with Bob’s public key.
 - Bob decrypts the data with his private key.
 - Bob has the original data.
 
 ## Insecurities
 
-A brute force attack means to keep attempting decryption with different keys until the correct one is found. To prevent this to the maximum extent, use a key as random as possible. Even though most programs use a hash of your password as the key, keep in mind that attackers can try popular passwords and word combinations, so follow the typical advice when setting your password.
+A brute force attack means to keep attempting decryption with different keys until the correct one is found. To prevent this to the maximum extent, use a key as random as possible. Even though most programs use a cryptographic hash of your password as the key, keep in mind that attackers can try popular passwords and word combinations, so follow the typical advice when setting your password.
 
 An encryption algorithm is considered cracked if there is any way to decrypt data faster (computationally less expensive) than using brute force. However, these can be done in differet levels and some speeds up the attempts more than others. If the data can be
 
