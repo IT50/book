@@ -39,7 +39,7 @@ The address is often defined sequentially to each byte. In this way, we nicely f
 
 ## Data is disorganized
 
-<lm class="lm-concept"></lm>As far as we have learned now, a piece of data is open for any interpretation. For the example above, you may read one byte at a time from the beginning to the end and think of them as integers. If you treat the digits in the written arrangement as above, you will get these integers:
+<lm class="lm-concept"></lm>As far as we have learned now, a piece of data is “chaos”, and in the following chapters we will construct order on top of that. For the example above, you may read one byte at a time from the beginning to the end and think of them as integers. If you follow this structure, you will get these integers:
 
 | Address | Data       | Integer (decimal) |
 | ------- | ---------- | ----------------: |
@@ -58,7 +58,7 @@ But alternatively, someone may have designed a bitmap image format, and the rule
 - The next byte should be interpreted as an integer that is the height of the image.
 - The rest of the data should be interpreted as pixels, starting from the top-left corner, going right and wrapping at the end of each row.
 
-If you follow this rule, the image will have a width of 6 and height of 8. You will wrap the string from bits 16 to 63 like this:
+If you follow this structure, the image will have a width of 6 and height of 8. You will wrap the string from bits 16 to 63 like this:
 
 ```
 000010
@@ -73,7 +73,7 @@ If you follow this rule, the image will have a width of 6 and height of 8. You w
 
 And your particular image viewer for this type should render these 0's and 1's into pixels of two different colors in the arrangement as above.
 
-Unfortunately, for now in this book, no one can tell if this data means a list of integers, a bitmap, or anything else. We will learn about the standards for interpreting data in the following chapters.
+Unfortunately, for now in this book, no one can tell if this data means a list of integers, a bitmap, or anything else. We will learn about the standards and conventions for interpreting data in the following chapters. The two structures in the examples above are also examples of [file formats](./file-format).
 
 ## Why we count from zero
 
