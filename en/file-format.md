@@ -4,25 +4,27 @@ We just learned about the standards for encoding and decoding text. Another aspe
 
 ## File name and extensions
 
-[[CON]] The file name, including any extensions, is independent from the data in the file. People commonly misunderstand the extensions in file names. The extensions are only a conventional, supplementary description of the file format, and may or may not provide more detailed description beyond the standardized characteristics in the file. [[IMPL]] You can open any file with any program and the program *should* check if the file opened is in a supported format, but a poorly made program may not do so and corrupt the file. Some operating systems (including Windows) solely rely on the extension to pick a program to open a file. If you use a non-conventional extension, or there's a rare format that uses a common extension, these operating systems may or may not open the correct program when you try to open a file by clicking on it.
+[[CON]] The file name, including any extensions, is independent from the data in the file. People commonly misunderstand the extensions in file names. The extensions are only a conventional, supplementary description of the file format, and may or may not provide more detailed description beyond the standardized characteristics in the file. 
+
+[[IMPL]] You can open any file with any program and the program *should* check if the file opened is in a supported format, but a poorly made program may not do so and corrupt the file. Some operating systems (including Windows) solely rely on the extension to pick a program to open a file. If you use a non-conventional extension, or there's a rare format that uses a common extension, these operating systems may or may not open the correct program when you try to open a file by clicking on it.
 
 ## List of generic file types, formats and conventional extensions
 
-- Non-compressed archive of other files (.tar, .zip, etc. that reflect the archive format)
-- Compressed file (.gz, .xz, .7z, etc. that reflect the compression format)
-- Compressed archive of other files (.zip, .7z, etc. that reflect the format)
+- Non-compressed archive of files (`.tar`, `.zip`, etc. that reflect the archive format)
+- Compressed file (`.gz`, `.xz`, `.7z`, etc. that reflect the compression format)
+- Compressed archive of files (`.zip`, `.7z`, etc. that reflect the format)
 - Binary executable
-  - Entry program (.exe on Windows, no extension on UNIX-like)
-  - Library (.dll on Windows, .so on Linux)
-- Raw data (.bin)
-  - Raw partition or disk image (.img, .bin)
+  - Entry program (`.exe` on Windows, no extension on UNIX-like)
+  - Library (`.dll` on Windows, `.so` on Linux)
+- Raw data (`.bin`)
+  - Raw partition or disk image (`.img`, `.bin`)
   - Memory dump
-- Plain text of any encoding (.txt)
-  - Program code (.c, .cpp, .java, etc. that reflect the language)
-    - Shell script (.sh, .ps1, etc. that reflect the shell, or no extension on UNIX-like)
-  - Markup language document (.html, .md, etc. that reflect the language)
-  - Structured information (.json, .ini, .yml, etc that reflect the language)
-    - Configuration file of standardized or non-standardized structure (.conf, .cf, etc.)
+- Plain text of any encoding (`.txt`)
+  - Program code (`.c`, `.cpp`, `.java`, etc. that reflect the language)
+    - Shell script (`.sh`, `.ps1`, etc. that reflect the shell, or no extension on UNIX-like)
+  - Markup language document (`.html`, `.md`, etc. that reflect the language)
+  - Structured information (`.json`, `.ini`, `.yml`, etc that reflect the language)
+    - Configuration file of standardized or non-standardized structure (`.conf`, `.cf`, etc.)
 - Other specialized formats
 
 ## Description of specialized types
