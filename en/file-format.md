@@ -33,7 +33,7 @@ We just learned about the standards for encoding and decoding text. Another aspe
 
 [[CON]] **Archive** formats combine multiple files into one file. **File compression** algorithms can losslessly convert data to and from a less space-consuming form stored in a specialized format.
 
-An archive does not have to compress its contents. The UNIX Tape Archive (TAR) format is an example of this. People usually compress the TAR file with one of the compression algorithms and get the compressed file with double extensions (e.g. .tar.gz). Other archive formats may have compression integrated and produce one compressed file with one extension.
+An archive does not have to compress its contents. The UNIX Tape Archive (TAR) format is an example of this. People usually compress the TAR file with one of the compression algorithms and get the compressed file with double extensions (`.tar.gz`). Other archive formats may have compression integrated and produce one compressed file with one extension.
 
 ### Media
 
