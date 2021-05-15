@@ -30,6 +30,6 @@ Most text files are just each character’s bit sequences concatenated together,
 
 ## Try it
 
-<lm class="lm-application"></lm>Try a text editor that lets you choose an encoding to work with. Create a file, set the editor’s encoding mode to ISO Latin 1, and type some characters. Switch the editor’s mode to Unicode and see if text is still displayed correctly. Paste some characters from Cyrillic, Greek, Arabic, or Chinese into the document and see if text is still displayed correctly. Now switch the editor’s mode back to ISO Latin 1 and see how these new characters are displayed.
+<lm class="lm-application"></lm>Try a text editor that lets you choose an encoding to work with. Create a file, set the editor’s encoding mode to ISO Latin 1, and type some characters. Switch the editor’s mode to Unicode and see if text is still displayed correctly. Paste some characters from Cyrillic, Greek, Arabic, or Chinese into the document but see if text is still displayed correctly. Now switch the editor’s mode back to ISO Latin 1 and see how these new characters are displayed.
 
 You may also want to save this file from time to time and use a hexadecimal data viewer to see it in raw.
