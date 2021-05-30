@@ -58,10 +58,3 @@ However, in the real world it is not practical to know everyone’s public key. 
 A brute force attack means to keep attempting decryption with different keys until the correct one is found. To prevent this to the maximum extent, use a key as random as possible. Even though most programs use a cryptographic hash of your password as the key, keep in mind that attackers can try popular passwords and word combinations, so follow the typical advice when setting your password.
 
 An encryption algorithm is considered cracked if there is any way to decrypt data faster (computationally less expensive) than using brute force. However, these can be done in differet levels and some speeds up the attempts more than others. If the data can be
-
-## Block cipher
-
-Mathematics require that the key be larger (longer) than the data for the encryption to function. (BOTH SY AND ASY?) Therefore, people come up with different ways to split up data while keeping the system secure.
-
-Here is a list of common block ciphers:
-
