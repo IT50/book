@@ -2,7 +2,7 @@
 
 We want to keep secrets. Rather than keeping all the data in our heads or guarding a physical copy, we can encrypt that data so it exists in some other form that is not meaningful to anyone who cannot decrypt.
 
-In this chapter, we are mainly going to talk about the two types of encryption: **symmetric encryption** and **asymmetric encryption**. We will deal with original data, encrypted data, and **keys**. The key is the parameter used to transform the data. Ideally, encrypted data should look like random data, and data encrypted with different (even similar) keys should be in no way similar to each other. Such encryption algorithms have been designed by scientists. But still, they fall into the two categories.
+In this chapter, we are mainly going to talk about the two types of encryption: **symmetric encryption** and **asymmetric encryption**. We will deal with original data, encrypted data, and **keys**. The key is the parameter used to transform the data. Ideally, encrypted data should look like random data, and data encrypted with different (even similar) keys should be in no way similar to each other. Such encryption algorithms have been designed by scientists.
 
 ## Symmetric encryption
 
@@ -23,7 +23,7 @@ Symmetric encryption is suitable for storage and internal networks where keys ar
 
 Asymmetric encryption has a pair of keys. When one of the keys is used to encrypt data, only the other key can be used to decrypt. Keep in mind that the sender knows the original data.
 
-Usually, one key is made public and the other is kept private. This design allows secure communication.
+Usually, one key is made public, called **public key**, and the other is kept private, called **private key**. This design allows secure communication.
 
 ### Ideal workflow
 
@@ -57,4 +57,4 @@ However, in the real world it is not practical to know everyone’s public key. 
 
 A brute force attack means to keep attempting decryption with different keys until the correct one is found. To prevent this to the maximum extent, use a key as random as possible. Even though most programs use a cryptographic hash of your password as the key, keep in mind that attackers can try popular passwords and word combinations, so follow the typical advice when setting your password.
 
-An encryption algorithm is considered cracked if there is any way to decrypt data faster (computationally less expensive) than using brute force. However, these can be done in differet levels and some speeds up the attempts more than others. If the data can be
+An encryption algorithm is considered cracked if there is any way to decrypt data faster (computationally less expensive) than using brute force. However, these can be done in differet levels and some speeds up the attempts more than others.
