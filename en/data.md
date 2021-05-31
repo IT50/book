@@ -10,7 +10,7 @@ To illustrate some points, we start with an example:
 
 ## Bit and Byte
 
-[[CON]] A single digit in the data above represents a **bit**. Its symbol is a lowercase **b**. A bit has only two possible values, and we call them “off” and “on”. In raw data we can use 0 and 1 to represent them. The data above contains 64 bits.
+A single digit in the data above represents a **bit**. Its symbol is a lowercase **b**. A bit has only two possible values, and we call them “off” and “on”. In raw data we can use 0 and 1 to represent them. The data above contains 64 bits.
 
 A **byte** is 8 bits long. Its symbol is an uppercase **B**. Today's computers know bytes inherently. Computers process a multitude of bytes at once. They also recognize the positions where bytes start. Thus, bytes are usually only useful as a whole.
 
@@ -36,7 +36,7 @@ You will also read data in bytes rather than in bits. A byte is commonly written
 
 ## Addressing
 
-Similar to how only whole bytes are useful, in certain contexts, only whole **blocks** of many bytes are useful. In such contexts, the total length of raw data is a multitude of a block size, which is commonly chosen to be an exponent of 2 bytes. In other contexts where the concept of block is not helpful, the length of raw data can be any number of bytes.
+Similar to how only whole bytes are useful, in certain contexts, only whole **blocks** of some bytes are useful. In such contexts, the total length of raw data is a multitude of a block size, which is commonly chosen to be an exponent of 2 bytes. In other contexts where the concept of block is not helpful, the length of raw data can be any number of bytes.
 
 An **address** is a number used to locate a byte or block in raw data.
 
@@ -70,7 +70,11 @@ Note where the binary number bumps to the 7th and 9th place. Because there are s
 
 ## Raw data operations
 
+In most contexts, raw data has a fixed size and do not become longer or shorter.
 
+Generally, on any data, there can be read and write operations. On raw data, to write means to overwrite, changing a part to the desired content and destroying existing data. The time needed to read and write sequentially on any storage device is proportional to the data size.
+
+When the original data is not important, a piece of raw data may be referred to as space.
 
 ## Raw data is mundane
 
