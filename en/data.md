@@ -70,7 +70,7 @@ Note where the binary number bumps to the 7th and 9th place. Because there are s
 
 ## Raw data operations
 
-In most contexts, raw data has a fixed size and do not become longer or shorter.
+In most contexts, raw data has a fixed size and does not become longer or shorter.
 
 Generally, on any data, there can be read and write operations. On raw data, to write means to overwrite, changing a part to the desired content and destroying existing data. The time needed to read and write sequentially on any storage device is proportional to the data size.
 
