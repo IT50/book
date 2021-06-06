@@ -1,15 +1,11 @@
 #!/bin/bash
 
-dir=$(pwd)
-cd mkdocs-instances
+cd $(dirname "$0")/mkdocs-instances
 
 for l in en zh-Hans
 do
-    cd $l
-    mkdocs build -d $dir/$1/ --dirty
-    cd ..
+    mkdocs build -f $l/mkdocs.yml -d $1 --dirty
 done
 
-cd root
-mkdocs build -d $dir/$1/ --dirty
-cd ..
+mkdocs build -f root/mkdocs.yml -d $1 --dirty
+
