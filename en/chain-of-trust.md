@@ -1,0 +1,9 @@
+# Chain of Trust
+
+As you read through the Asymmetric Cryptography chapter, you may have noticed that such a system alone cannot guarantee the authenticity of the public key. And you may also have guessed that is not a good idea to pre-share all public keys to everyone. The world currently has a solution for authentic public key exchange.
+
+To establish trust, a third party verifies someone's ownership of a public key and attests that by means of signing. This third party is called a **certificate authority** (**CA**), and such an attestation is called a **CA certificate**. We can trust all a CA's public key ownership attestations if the CA only provides attestation responsibly, i.e. only after it has verified the ownership of the public key. Then we can trust the public key of this well-behaving CA and verify all certificates it issues afterwards.
+
+A certificate contains a number of information fields, such as a Common Name, Organizational Unit, etc. It is possible to have a certificate with only the minimal necessary information for a secure data exchange. For example, for a secure connection to a website, it is considered OK to only match the domain name. In this situation, the CA only needs to verify that a public key owner also owns the domain. If more information fields are used, the CA would have more verification to do. When there is enough information to associate with a legal entity, this certificate is called to fulfill Extended Validation (EV).
+
+A certificate should be revoked if the corresponding private key has been compromised, or if the certificate itself was issued improperly.
