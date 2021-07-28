@@ -30,7 +30,7 @@ Currently, the most commonly used and secure cryptographic hash functions are th
 
 ## Insecurities
 
-When we use cryptographic hashes to secure things, we rely on their irreversibility. Because ideal cryptographic hash functions are irreversible, the most inefficient way to attack is to use brute force, simply trying inputs one by one. The chance of finding the same hash value is so low that it usually takes very long time to find the same hash.
+When we use cryptographic hashes to secure things, we rely on their irreversibility. Because ideal cryptographic hash functions are irreversible, the only way to attack is to use brute force, simply trying inputs one by one. The chance of finding the same hash value is so low that it is expected to take very long to find the same hash.
 
 An intelligent finding in the algorithm may make attacking faster than brute force. When such attacks are found, the hash function should be obsoleted.
 
