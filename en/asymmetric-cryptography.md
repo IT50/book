@@ -42,7 +42,7 @@ The two scenarios above also apply to signing and signature verification. For br
 ## Ideal workflow for signing and signature verification
 
 - Alice has a piece of data to publish.
-- Alice signs (transforms) the hash of the data with her private key. This is the signature.
+- Alice signs (transforms) a cryptographic hash of the data with her private key. This is the **signature**.
 - Alice sends the original data along with the signature.
 - Bob receives the data along with the signature.
 - Bob calculates the hash of the data.
