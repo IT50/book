@@ -1,4 +1,4 @@
-# Data
+# Binary Data
 
 It is commonly known that computers hold and process data in binary — 0’s and 1’s. However, it may take a few moments for you to understand what that actually means.
 
