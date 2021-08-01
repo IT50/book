@@ -20,7 +20,7 @@ A pair of keys is generated at once. Usually, one key is made public, and called
 
 Note that Alice does not encrypt with her own private key, or anyone who has access to the encrypted data would be able decrypt it.
 
-However, in the real world it is not practical to know everyone’s public key in advance. The key has to be shared at the start of the connection. In this situation, the connection bearer can always perform a **man-in-the-middle (MITM)** attack. The next section shows how such attack works. The world currently has a widely used (and *pretty* solid) way to prevent MITM attacks, and we will talk about that in the Public Key Infrastructure chapter.
+However, in the real world it is not practical to know everyone’s public key in advance. A trusted channel is required to pre-distribute the public key, or the key has to be shared at the start of the connection. In the second situation, the connection bearer can always perform a **man-in-the-middle (MITM)** attack. The next section shows how such attack works. The world currently has a widely used (and *pretty* solid) way to distribute authentic public keys, and we will talk about that in the Public Key Infrastructure chapter.
 
 ## Workflow for sending a message, but with in-time public key sharing and MITM attack
 
