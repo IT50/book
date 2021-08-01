@@ -16,7 +16,7 @@ theme:
 
 nav:
   - About: en/
-  - Book: en/introduction
+  - Book: en/data
 
 extra:
   alternate:

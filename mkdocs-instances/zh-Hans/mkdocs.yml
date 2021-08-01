@@ -17,7 +17,6 @@ theme:
 nav:
   - 关于: zh-Hans/
   - 书:
-    - 介绍: zh-Hans/introduction.md
     - 数据: zh-Hans/data.md
     - 文字编码: zh-Hans/text-encoding.md
 
