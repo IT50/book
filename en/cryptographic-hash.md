@@ -11,13 +11,15 @@ Hash functions are deterministic. The same input data will always result in the 
 | (empty)                  | (empty)       | `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855` |
 | `48656c6c6f20776f726c64` | `Hello world` | `64ec88ca00b268e5ba1a35678a1b5316d212f4f366b2477232534a8aeca37f3c` |
 
+Because there are infinite possible inputs but only finitely many hash values, there must be multiple pieces of data that hashes to the same value. This is called **collision**.
+
 ## Cryptographic hash function
 
 A **cryptographic hash function** is also:
 
-- Irreversible. Hash functions can only take in a piece of data and output its hash. They are not feasibly reversible: the only way to reverse a hash function is trying inputs. Similarly, it should be infeasible to find two different pieces of data that have the same hash value.
+- Irreversible. The only way to find possible inputs from a hash is to try inputs one by one and check if the hash matched. It is also infeasible to make any inference about the input data from the hash alone.
 
-- Chaotic. The mapping from data to hashes should seem random. Two similar pieces of data will result in seemingly uncorrelated hashes.
+- Chaotic. The mapping from data to hashes should seem random. Two similar pieces of data will result in seemingly uncorrelated hashes. Therefore, it is infeasible to construct an input that hashes to a given value (purposefully construct a collision).
 
 | Data (hexadecimal) | SHA-2 256 hash |
 | ---- |------------ |
