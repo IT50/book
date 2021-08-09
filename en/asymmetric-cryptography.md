@@ -1,10 +1,8 @@
 # Asymmetric Cryptography
 
-**Asymmetric cryptography** has a pair of keys. When one of the keys is used to encrypt data, only the other key can be used to decrypt.
+**Asymmetric cryptography** has a pair of keys. Two keys are generated at once using a mathematical technique so that the two keys are not inferable from one to the other, and when one of the keys is used to encrypt data, only the other key can be used to decrypt.
 
-Keep in mind that the sender knows the original data.
-
-A pair of keys is generated at once. Usually, one key is made public, and called the **public key**; the other is kept private, and called the **private key**. Then the following actions are possible:
+The owner of the key pair generates a pair of keys. Then, one key is made public, and called the **public key**; the other is kept private, and called the **private key**. Now the following actions are possible:
 
 - Sending a message securely to a designated recipient. Transforming a piece of data with the public key ensures that the data can only be read by the designated recipient, the owner of the private key.
 - Proving authenticity. Transforming a piece of data with the private key proves the authenticity of the data because only the owner of the key can do so. Thus, this action is not called encrypting but **signing** as it does not make anything secret.
@@ -37,7 +35,7 @@ However, in the real world it is not practical to know everyone’s public key i
 - Bob decrypts the data with his private key.
 - Bob has the original data.
 
-The two scenarios above also apply to signing and signature verification. For brevity, only the ideal one is described here.
+The two scenarios above also apply to signing and signature verification. For brevity, only the ideal one is included.
 
 ## Ideal workflow for signing and signature verification
 
