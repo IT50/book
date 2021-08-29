@@ -4,10 +4,14 @@
 
 A **hash function** is a function that takes in data of any length and outputs data of a fixed length, called its **hash**.
 
-Hash functions are deterministic. The same input data will always result in the same hash. Hash functions are also quick to compute for a single input.
+Hash functions are deterministic. With the same hash function, the same input data will always result in the same hash.
 
-| Data (hexadecimal)       | Text (UTF-8)  | SHA-2 256 hash                                               |
-| ------------------------ | ------------- | ------------------------------------------------------------ |
+The time needed to compute a hash of a piece of data grows with the size of the data.
+
+Below are two pieces of data and their 256-bit SHA-2 hash.
+
+| Data (hexadecimal)       | Text (UTF-8)  | SHA-2 256 hash                                                     |
+| ------------------------ | ------------- | ------------------------------------------------------------------ |
 | (empty)                  | (empty)       | `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855` |
 | `48656c6c6f20776f726c64` | `Hello world` | `64ec88ca00b268e5ba1a35678a1b5316d212f4f366b2477232534a8aeca37f3c` |
 
@@ -21,8 +25,8 @@ A **cryptographic hash function** is also:
 
 - Chaotic. The mapping from data to hashes should seem random. Two similar pieces of data will result in seemingly uncorrelated hashes. Therefore, it is infeasible to construct an input that hashes to a given value (purposefully construct a collision).
 
-| Data (hexadecimal) | SHA-2 256 hash |
-| ---- |------------ |
+| Data (hexadecimal) | SHA-2 256 hash                                                     |
+| ------------------ | ------------------------------------------------------------------ |
 | `089f8954a605c945` | `e7ad94f8f1338ce71c0b033d881abafd978cb332a56f1fe2d79082565aafc5ee` |
 | `089f8954a605c946` | `581c858eba8d0c8a9e418f35193ca72536f91f55a7610b7001d0c0330bc8b1b6` |
 
