@@ -23,17 +23,19 @@ However, in the real world it is not practical to know everyone’s public key i
 ## Workflow for sending a message, but with in-time public key sharing and MITM attack
 
 - Alice has the original data.
-- Alice requests Bob for his public key and this request ended up in Charles’ hand.
+- Alice requests Bob for his public key and this request is intercepted by Charles.
 - Charles requests Bob for his public key. Bob responds with his public key.
 - Charles responds Alice with his own public key.
 - Alice encrypts the original data with Charles’s public key.
-- Alice sends the encrypted data to Bob and it ended up in Charles’ hand.
+- Alice sends the encrypted data to Bob and it is intercepted by Charles.
 - Charles decrypts the data with his private key.
 - Charles has the original data.
 - Charles optionally modifies the original data.
 - Charles encrypts the original data with Bob’s public key.
 - Bob decrypts the data with his private key.
 - Bob has the original data.
+
+Note that in order to perform an MITM attack, the attacker must be able to intercept and modify the initial key exchange. Merely viewing the keys does not compromise asymmetric cryptography.
 
 The two scenarios above also apply to signing and signature verification. For brevity, only the ideal one is included.
 
