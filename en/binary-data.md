@@ -10,7 +10,7 @@ To illustrate some points, we start with an example:
 
 ## Bit and Byte
 
-A single digit in the data above represents a **bit**. Its symbol is a lowercase **b** (or for better discrimination, **bit**). A bit has only two possible values, and we call them “off” and “on”. In raw data we can use 0 and 1 to represent them. The data above contains 64 bits.
+A single digit in the data above represents a **bit**. Its symbol is a lowercase **b** (or for better discrimination, **bit**). A bit has only two possible values, “off” and “on”, and we use 0 and 1 to represent them. The data above contains 64 bits.
 
 A **byte** is 8 bits long. Its symbol is an uppercase **B**. Today's computers know bytes inherently. Computers process a multitude of bytes at once. They also recognize the positions where bytes start. Bytes are usually only used as a whole. Incomplete bytes do not exist.
 
