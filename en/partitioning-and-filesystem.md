@@ -4,13 +4,13 @@ Remember from where we introduced data, the space on your disk is just a singula
 
 There are two types of allocation: **partitioning** and **filesystem**. Partitioning is quite rudimentary: it defines usable segments of your disk space. Then, typically, a filesystem is established in each partition to contain files, usually in a tree structure.
 
-On modern disks, data is accessed by logical blocks. Logical blocks addresses are linearally assigned, starting with 0. Most disks have a logical block size of 512 bytes.
+On modern disks, data is accessed by logical blocks. **Logical blocks address**es (**LBA**) are linearally assigned, starting with 0. Most disks have a logical block size of 512 bytes.
 
 ## Partitioning
 
 Partitioning is a type of abstraction about designating non-overlapping segments called **partitions**. A small **partition table** that stores this structure is usually put at the beginning of the disk, and the corresponding segments of data should be made accessible separately by an operating system.
 
-This book only introduces the modern (not “legacy”) and common partitioning standard, the **GUID Partition Table** (**GPT**). A GPT typically takes the first 34 and last 33 (two copies) logical blocks to store the partition data, but this size can vary to accommodate more or fewer partitions. Each partition entry in the table contains the following information:
+This book only introduces the modern (not “legacy”) and common partitioning standard, the **GUID Partition Table** (**GPT**). A GPT typically takes the first 34 and last 33 (two copies) logical blocks to store 128 partitions, and this size can vary to accommodate more or fewer partitions. Each partition entry in the table contains the following information:
 
 - *Partition type GUID.* Each partition type that exists has a standard GUID. Operating systems should recognize those that they support.
 - *Partition GUID.* A unique GUID to identify a partition. There should not be duplicate partition GUIDs on a system.
