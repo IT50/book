@@ -4,7 +4,7 @@ We always want software to be consistent and compatible with each other. One of 
 
 ## Fixed character length
 
-Mathematically, with exactly _n_ bits, it is only possible to define 2_ⁿ_ unique characters. If each character takes up exactly 8 bits, we can define 256 characters. This is the case in [ISO 8859-1 Latin 1](https://en.wikipedia.org/wiki/ISO/IEC_8859-1#Code_page_layout), although some sequences are left undefined.
+Mathematically, with exactly _n_ bits, it is only possible to define 2ⁿ unique characters. If each character takes up exactly 8 bits, we can define 256 characters. This is the case in [ISO 8859-1 Latin 1](https://en.wikipedia.org/wiki/ISO/IEC_8859-1#Code_page_layout), although some sequences are left undefined.
 
 Control characters, such as line break and null terminator, are treated just as normal characters in text encodings.
 
