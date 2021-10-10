@@ -18,7 +18,7 @@ This book only introduces the modern (not “legacy”) and common partitioning 
 - *Partition GUID.* A unique GUID to identify a partition. There should not be duplicate partition GUIDs on a system.
 - *Start LBA.* Specifies the start position. The partition includes the whole start logical block.
 - *End LBA.* Specifies the end position. The partition includes the whole end logical block.
-- *Attribute flags.* Specifies special attributes.
+- *Attribute flags.* Specify special attributes.
 - *Partition name.* Encoded in 36 units of UTF-16LE.
 
 ## Filesystem
