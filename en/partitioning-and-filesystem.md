@@ -1,8 +1,6 @@
 # Partitioning and Filesystem
 
-You should have kept in mind that we have been exploring the contexts of data, constructing meaning out of mundaneness. In this chapter, we go beyond the files and look at what contains the files.
-
-Remember from where we introduced data, the space on your disk is just a singular series of 0’s and 1’s, and they can *only* be 0’s and 1’s. That is to say, the space allocation information is stored just in these 0’s and 1’s. Some parts of your disk store your files, and some parts store the space allocation information, all in the same, continuous, indifferent series of 0’s and 1’s of your disk.
+Remember from where we introduced data, the space on your disk is just a singular series of 0’s and 1’s, and they can *only* be 0’s and 1’s. That is to say, the space allocation information is stored just in these 0’s and 1’s. Some parts of your disk store your files, and some parts store the space allocation information, all in the same, continuous, indifferent series of 0’s and 1’s of your disk. In this chapter, we set up levels of abstractions over this indifferent data to enable the familiar concepts we know.
 
 There are two types of allocation: **partitioning** and **filesystem**. Partitioning is quite rudimentary: it defines usable segments of your disk space. Then, typically, a filesystem is established in each partition to contain files, usually in a tree structure.
 
@@ -10,7 +8,7 @@ On modern disks, data is accessed by logical blocks. Logical blocks addresses ar
 
 ## Partitioning
 
-Partitioning is about designating non-overlapping segments called **partitions**. A small **partition table** that stores this structure is usually put at the beginning of the disk, and the corresponding segments of data should be made accessible separately by an operating system.
+Partitioning is a type of abstraction about designating non-overlapping segments called **partitions**. A small **partition table** that stores this structure is usually put at the beginning of the disk, and the corresponding segments of data should be made accessible separately by an operating system.
 
 This book only introduces the modern (not “legacy”) and common partitioning standard, the **GUID Partition Table** (**GPT**). A GPT typically takes the first 34 and last 33 (two copies) logical blocks to store the partition data, but this size can vary to accommodate more or fewer partitions. Each partition entry in the table contains the following information:
 
@@ -23,7 +21,7 @@ This book only introduces the modern (not “legacy”) and common partitioning 
 
 ## Filesystem
 
-Now, what gives the directory structure out of the raw data in a partition? A filesystem is established to do this job.
+Up to this point, there is no way to allocate many pieces of data of dynamic sizes. Our next type of abstraction, filesystem, is established (usually in a partition) to do this job. The most common filesystems give a tree structure.
 
 Filesystem is already a very complicated topic on its own. But a general idea is that, somewhat similar to partitioning, there is a “file table” at a fixed location (usually the start of space), and it contains data such as where each file starts and ends, the directory structure, permissions, _etc._ The actual file data is put in the remaining space.
 
