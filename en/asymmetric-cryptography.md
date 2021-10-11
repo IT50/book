@@ -5,7 +5,7 @@
 The owner of the key pair generates a pair of keys. Then, one key is made public (**public key**), and the other is kept private (**private key**). Now the following actions are possible:
 
 - *Sending a message securely to a designated recipient.* Transforming plaintext with the public key ensures that the data can only be read by the designated recipient, the owner of the private key.
-- *Proving authenticity.* Transforming a piece of data with the private key proves the authenticity of the data because only the owner of the key can do so. Thus, this action is not called encrypting but **signing** as it does not make anything secret.
+- *Proving authenticity.* Transforming a piece of data with the private key proves the authenticity of the data because only the owner of the key can do so. Thus, this action is not called encrypting but **signing** as it does not make anything secret. In many contexts, signing implies endorsement of the content.
 
 ## Ideal workflow for sending a message
 
@@ -24,8 +24,8 @@ However, in the real world it is not practical to know everyone’s public key i
 
 - Alice has the plaintext.
 - Alice requests Bob for his public key and this request is intercepted by Charles.
-- Charles requests Bob for his public key. Bob responds with his public key.
-- Charles responds Alice with his own public key.
+- Charles requests Bob for his public key. Bob thinks Charles were Alice. Bob responds with his public key.
+- Charles responds Alice with his own public key. Alice thinks Charles were Bob.
 - Alice encrypts the plaintext with Charles’ public key.
 - Alice sends the ciphertext to Bob and it is intercepted by Charles.
 - Charles decrypts the ciphertext with his private key.
