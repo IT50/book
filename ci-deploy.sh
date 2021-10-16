@@ -1,7 +1,4 @@
-CI_TOKEN=$1
-
 cd ..
-pip install mkdocs-material
 git clone "https://${CI_TOKEN}@github.com/IT50/it50.github.io"
 book/build.sh it50.github.io
 cd it50.github.io
@@ -12,4 +9,3 @@ echo "Before commit"
 git commit -m "Update site"
 echo "After commit"
 git push
-
