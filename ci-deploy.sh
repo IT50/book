@@ -1,3 +1,5 @@
+CI_TOKEN=$1
+
 cd ..
 pip install mkdocs-material
 git clone "https://${CI_TOKEN}@github.com/IT50/it50.github.io"
