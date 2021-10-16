@@ -13,4 +13,5 @@ jobs:
       - uses: actions/setup-python@v2
         with:
           python-version: 3.x
-      - run: ./ci-deploy.sh $CI_TOKEN
+      - run: pip3 install mkdocs-material
+      - run: CI_TOKEN=$CI_TOKEN ./ci-deploy.sh
