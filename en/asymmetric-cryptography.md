@@ -35,7 +35,7 @@ However, in the real world it is not practical to know everyone’s public key i
 - Bob decrypts the ciphertext with his private key.
 - Bob has the (possibly modified) plaintext.
 
-Note that in order to perform an MITM attack, the attacker must be able to intercept and modify the initial key exchange. Merely viewing public keys does not compromise asymmetric cryptography.
+Note that in order to perform an MITM attack, the attacker must be able to intercept and modify all messages between Alice and Bob. Merely viewing public keys does not compromise asymmetric cryptography.
 
 The world currently has a widely used (and *pretty* solid) way to distribute authentic public keys, and we will talk about that in the Public Key Infrastructure chapter. If this technique is used, Alice should have noticed that the public key is not authentic.
 
