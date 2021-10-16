@@ -6,5 +6,8 @@ cd it50.github.io
 git config user.name CI
 git config user.email ci@it50.org
 git add .
+echo "Before commit"
 git commit -m "Update site"
+echo "After commit"
 git push
+
