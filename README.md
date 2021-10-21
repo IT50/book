@@ -12,9 +12,9 @@ As of August 28, 2021, members of IT50 are no longer anonymous.
 
 We are open to accept new contributors and unsolicited commits.
 
-Before you start writing, please compare the following table of contents with the existing documents in the language you plan to write in.
+Before you start writing, please compare the following table of contents with the existing documents in the language you plan to write in. You may start a new chapter or revise existing ones.
 
-If a chapter has an English version, then other versions must translate it.
+If a chapter has an English version, then other versions must translate it. However, revisions on the English version are accepted.
 
 - Data
   - Binary Data
