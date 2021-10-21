@@ -12,7 +12,7 @@ RAM is **volatile**. All data in RAM is lost once power is lost.
 
 ## Binary program
 
-Computers can only execute binary instructions directly. These binary instructions are known to be in **machine language**.
+Binary instructions are the only thing that computers can execute directly. These binary instructions are known to be in **machine language**.
 
 However, a given machine only accepts some machine languages, not all the ones that exist in the world. These pecuilarities are standardized into **instruction sets**, sets of instructions that the machine is able to execute. A machine’s instruction sets must contain all the instructions used in the program for the program to run correctly. Luckily, when dealing with recent processors, we only need to match the major **architecture** of the CPU to run the program correctly, because this is enough to match to the correct instruction sets.
 
