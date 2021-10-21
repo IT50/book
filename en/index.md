@@ -24,7 +24,7 @@ Indeed, driving is a useful skill, and so is computer literacy. We are sure you 
 
 ## Contributing
 
-There is ongoing discussion about further content and project structure.
+There is ongoing discussion about further content.
 
 We are open to accept new contributors and unsolicited commits.
 
