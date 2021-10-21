@@ -1,6 +1,6 @@
 # Public Key Infrastructure
 
-As you read through the Asymmetric Cryptography chapter, you may have noticed that such a system alone cannot guarantee the authenticity of the public key, _i.e._ no way to trust that a particular public key belongs to a particular entity, other than manual record. The world currently has a **public key infrastructure** (**PKI**) for authentic public key distribution.
+As you read through the Asymmetric Cryptography chapter, you may have noticed that such a system alone cannot guarantee the authenticity of the public key, _i.e._ no way to trust that a particular public key belongs to a particular entity, other than manual record. The world currently has a **public key infrastructure** (**PKI**) to protect the authenticity of public keys shared over an insecure channel.
 
 ## Entity
 
