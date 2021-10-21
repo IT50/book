@@ -7,12 +7,6 @@ theme:
     - navigaion.instant
     - navigation.tabs
     - navigation.indexes
-  # palette:
-  #   - scheme: it50
-  # logo: /static/assets/icon.svg
-  # favicon: /static/assets/icon.svg
-  # font:
-  #   text: Mukta
 
 nav:
   - About: en/
@@ -27,11 +21,6 @@ extra:
     - name: 中文（简体）
       link: /zh-Hans/
       lang: zh
-
-extra_css:
-  - /static/stylesheets/features.css
-  # - /static/stylesheets/dimensions.css
-  # - /static/stylesheets/colors.css
 
 markdown_extensions:
   - extra
