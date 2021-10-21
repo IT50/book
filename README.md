@@ -7,6 +7,7 @@ As of August 28, 2021, members of IT50 are no longer anonymous.
 
 - English (unfinished)
 - 简体中文（未完成）
+- You add it!
 
 ## Contributing
 
