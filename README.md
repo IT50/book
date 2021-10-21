@@ -14,7 +14,7 @@ We are open to accept new contributors and unsolicited commits.
 
 Before you start writing, please compare the following table of contents with the existing documents in the language you plan to write in. You may start a new chapter or revise existing ones.
 
-If a chapter has an English version, then other versions must translate it. However, revisions on the English version are accepted.
+The English version takes precedence. If you plan to start a chapter that currently does not exist in any language, please use English. If a chapter has an English version, then other versions must translate it. However, revisions on the English version are accepted.
 
 - Data
   - Binary Data
