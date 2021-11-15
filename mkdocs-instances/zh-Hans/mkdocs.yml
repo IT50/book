@@ -9,22 +9,22 @@ theme:
     - navigation.indexes
 
 nav:
-  - 关于: zh-Hans/
+  - 关于: /zh-Hans/
   - 书:
     - 数据:
-      - 概览: zh-Hans/data.md
-      - 二进制数据: zh-Hans/binary-data.md
-      - 文字编码: zh-Hans/text-encoding.md
-      - 文件格式: zh-Hans/file-format.md
-      - 分区和文件系统: zh-Hans/partitioning-and-filesystem.md
+      - 概览: /zh-Hans/theory/data.md
+      - 二进制数据: /zh-Hans/theory/binary-data.md
+      - 文字编码: /zh-Hans/theory/text-encoding.md
+      - 文件格式: /zh-Hans/theory/file-format.md
+      - 分区和文件系统: /zh-Hans/theory/partitioning-and-filesystem.md
     - 程序:
-      - 概览: zh-Hans/program.md
+      - 概览: /zh-Hans/theory/program.md
     - 密码学:
-      - 概览: zh-Hans/cryptography.md
-      - 密码学哈希: zh-Hans/cryptographic-hash.md
-      - 对称密码学: zh-Hans/symmetric-cryptography.md
-      - 非对称密码学: zh-Hans/asymmetric-cryptography.md
-      - 公钥基础设施: zh-Hans/public-key-infrastructure.md
+      - 概览: /zh-Hans/theory/cryptography.md
+      - 密码学哈希: /zh-Hans/theory/cryptographic-hash.md
+      - 对称密码学: /zh-Hans/theory/symmetric-cryptography.md
+      - 非对称密码学: /zh-Hans/theory/asymmetric-cryptography.md
+      - 公钥基础设施: /zh-Hans/theory/public-key-infrastructure.md
     - 网络:
       - 概览: none
 

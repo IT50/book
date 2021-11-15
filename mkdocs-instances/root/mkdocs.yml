@@ -10,7 +10,8 @@ theme:
 
 nav:
   - About: en/
-  - Book: en/data
+  - Theory: en/theory/
+  - Lab: en/lab/
 
 extra:
   alternate:

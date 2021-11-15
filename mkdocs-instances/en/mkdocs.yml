@@ -9,22 +9,22 @@ theme:
     - navigation.indexes
 
 nav:
-  - About: en/
-  - Book:
+  - About: /en/
+  - Theory:
     - Data:
-      - Overview: en/data.md
-      - Binary Data: en/binary-data.md
-      - Text Encoding: en/text-encoding.md
-      - File Format: en/file-format.md
-      - Partitioning and Filesystem: en/partitioning-and-filesystem.md
+      - Overview: /en/theory/data.md
+      - Binary Data: /en/theory/binary-data.md
+      - Text Encoding: /en/theory/text-encoding.md
+      - File Format: /en/theory/file-format.md
+      - Partitioning and Filesystem: /en/theory/partitioning-and-filesystem.md
     - Program:
-      - Overview: en/program.md
+      - Overview: /en/theory/program.md
     - Cryptography:
-      - Overview: en/cryptography.md
-      - Cryptographic Hash: en/cryptographic-hash.md
-      - Symmetric Cryptogtaphy: en/symmetric-cryptography.md
-      - Asymmetric Cryptography: en/asymmetric-cryptography.md
-      - Public Key Infrastructure: en/public-key-infrastructure.md
+      - Overview: /en/theory/cryptography.md
+      - Cryptographic Hash: /en/theory/cryptographic-hash.md
+      - Symmetric Cryptogtaphy: /en/theory/symmetric-cryptography.md
+      - Asymmetric Cryptography: /en/theory/asymmetric-cryptography.md
+      - Public Key Infrastructure: /en/theory/public-key-infrastructure.md
     - Network:
       - Overview: none
 
