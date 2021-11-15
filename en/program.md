@@ -14,7 +14,7 @@ RAM is **volatile**. All data in RAM is lost once power is lost.
 
 Binary instructions are the only thing that computers can execute directly. These binary instructions are known to be in **machine language**.
 
-However, a given machine only accepts some machine languages, not all the ones that exist in the world. These pecuilarities are standardized into **instruction sets**, sets of instructions that the machine is able to execute, for example, x86 or arm are different instruction sets. A machine’s instruction sets must contain all the instructions used in the program for the program to run correctly. Luckily, when dealing with recent processors, we only need to match the major **architecture** of the CPU to run the program correctly, because this is enough to match to the correct instruction sets.
+However, a given machine only accepts some machine languages, not all the ones that exist in the world. These pecuilarities are standardized into **instruction sets**, sets of instructions that the machine is able to execute. A machine’s instruction sets must contain all the instructions used in the program for the program to run correctly. Luckily, when dealing with recent processors, we only need to match the major **architecture** of the CPU to run the program correctly, because this is enough to match to the correct instruction sets.
 
 Machine code runs at a very low level. It instructs the CPU directly. At this level, data is retreived by memory addresses, and the orderly execution of software is accomplished by correctly maintaining parts of memory. For example, machine codes may add or subtract numbers, compare values, access CPU registers, call interruptions or do some basic flow controls.
 
