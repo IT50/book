@@ -11,6 +11,7 @@ theme:
 nav:
   - About: en/
   - Theory:
+    - en/theory/index.md
     - Data:
       - en/theory/data.md
       - Binary Data: en/theory/binary-data.md
@@ -28,8 +29,10 @@ nav:
     - Network:
       - none
   - Lab:
-    - POSIX: en/lab/posix
-    - GNU/Linux: en/lab/gnu-linux
+    - en/lab/index.md
+    - GNU/Linux:
+      - en/lab/gnu-linux/index.md
+      - Program: en/lab/gnu-linux/program.md
     - macOS: en/lab/macos
     - Windows: en/lab/windows
 
@@ -47,3 +50,7 @@ markdown_extensions:
   - extra
   - meta
   - def_list
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - pymdownx.snippets
