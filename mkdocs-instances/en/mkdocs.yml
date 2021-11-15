@@ -9,8 +9,8 @@ theme:
     - navigation.indexes
 
 nav:
-  - About: /en/
-  - Theory: /en/theory
+  - About: /en/index.md
+  - Theory: /en/theory/index.md
     - Data:
       - Overview: /en/theory/data.md
       - Binary Data: /en/theory/binary-data.md
@@ -27,7 +27,7 @@ nav:
       - Public Key Infrastructure: /en/theory/public-key-infrastructure.md
     - Network:
       - Overview: none
-  - Lab: /en/lab
+  - Lab: /en/lab/index.md
     - POSIX: /en/lab/posix
     - GNU/Linux: /en/lab/gnu-linux
     - macOS: /en/lab/macos

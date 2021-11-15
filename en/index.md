@@ -8,8 +8,6 @@ hide:
 
 This book introduces our everyday computer systems from the perspective of a professional software user rather than a service user. You will be learning the fundamentals that a professional software user needs and then have greater control over the software you use.
 
-[Read the Book](/en/data){: .md-button }
-
 ## What *is* IT50?
 
 IT stands for Information Technology, a phrase less used in the 2020s. The reason behind this decline is the prosperity of services making users ignorant of the technical aspects. In this project, we bring those back to everyone who wishes to know.
@@ -23,8 +21,6 @@ We also try to build the best cognitive framework for our readers. We do not ove
 Indeed, driving is a useful skill, and so is computer literacy. We are sure you are going to find its significance.
 
 ## Contributing
-
-There is ongoing discussion about further content.
 
 We are open to accept new contributors and unsolicited commits.
 
