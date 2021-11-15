@@ -59,7 +59,7 @@ You don’t have to understand this piece of code.
 
 The first column is the linear address in the file. The hexadecimal data in the second column is the data at that address. The special thing about these data is that they are instructions directly executable by the x86-64 CPU. The last column shows what those hexadecimals stand for, in human-readable **assembly language**, in this case specific to the author’s CPU architecture.
 
-We can see a single `add` instruction with two operands. That instruction indeed does the addition for us, although the result is unused.
+We can see a single `add` instruction with two operands. That instruction indeed does the addition for us, although the result is unused. Note that no variable name is preserved in the compiled program.
 
 ## Optimization
 
@@ -71,7 +71,7 @@ The compiler we used, GCC, has optimization functionality. The second version we
   401022:       c3                      ret
 ```
 
-This one is much shorter. In fact, the only things it does is returning 0. This is because GCC found out we left the values unused and decided to not include them, so the program can run faster. You now have a basic sense of what optimization does.
+This one is much shorter. In fact, the only things it does is returning 0. This is because GCC found out we left the values unused and decided to not include them, so the program can run faster. This is only one of the many optimization techniques. Generally, optimizations make the code much faster to run, but much harder to read.
 
 ## Interpreted program
 
