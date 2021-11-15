@@ -9,38 +9,38 @@ theme:
     - navigation.indexes
 
 nav:
-  - About: /en/
+  - About: en/
   - Theory:
     - Data:
-      - /en/theory/data.md
-      - Binary Data: /en/theory/binary-data.md
-      - Text Encoding: /en/theory/text-encoding.md
-      - File Format: /en/theory/file-format.md
-      - Partitioning and Filesystem: /en/theory/partitioning-and-filesystem.md
+      - en/theory/data.md
+      - Binary Data: en/theory/binary-data.md
+      - Text Encoding: en/theory/text-encoding.md
+      - File Format: en/theory/file-format.md
+      - Partitioning and Filesystem: en/theory/partitioning-and-filesystem.md
     - Program:
-      - /en/theory/program.md
+      - en/theory/program.md
     - Cryptography:
-      - /en/theory/cryptography.md
-      - Cryptographic Hash: /en/theory/cryptographic-hash.md
-      - Symmetric Cryptogtaphy: /en/theory/symmetric-cryptography.md
-      - Asymmetric Cryptography: /en/theory/asymmetric-cryptography.md
-      - Public Key Infrastructure: /en/theory/public-key-infrastructure.md
+      - en/theory/cryptography.md
+      - Cryptographic Hash: en/theory/cryptographic-hash.md
+      - Symmetric Cryptogtaphy: en/theory/symmetric-cryptography.md
+      - Asymmetric Cryptography: en/theory/asymmetric-cryptography.md
+      - Public Key Infrastructure: en/theory/public-key-infrastructure.md
     - Network:
       - none
   - Lab:
-    - POSIX: /en/lab/posix
-    - GNU/Linux: /en/lab/gnu-linux
-    - macOS: /en/lab/macos
-    - Windows: /en/lab/windows
+    - POSIX: en/lab/posix
+    - GNU/Linux: en/lab/gnu-linux
+    - macOS: en/lab/macos
+    - Windows: en/lab/windows
 
 extra:
-  homepage: /en/
+  homepage: en/
   alternate:
     - name: English
-      link: /en/
+      link: en/
       lang: en
     - name: 中文（简体）
-      link: /zh-Hans/
+      link: zh-Hans/
       lang: zh
 
 markdown_extensions:
