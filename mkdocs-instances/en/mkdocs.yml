@@ -10,7 +10,7 @@ theme:
 
 nav:
   - About: /en/
-  - Theory:
+  - Theory: /en/theory
     - Data:
       - Overview: /en/theory/data.md
       - Binary Data: /en/theory/binary-data.md
@@ -27,6 +27,11 @@ nav:
       - Public Key Infrastructure: /en/theory/public-key-infrastructure.md
     - Network:
       - Overview: none
+  - Lab: /en/lab
+    - POSIX: /en/lab/posix
+    - GNU/Linux: /en/lab/gnu-linux
+    - macOS: /en/lab/macos
+    - Windows: /en/lab/windows
 
 extra:
   homepage: /en/
