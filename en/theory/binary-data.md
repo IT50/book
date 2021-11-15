@@ -92,7 +92,3 @@ The base units for the amount of data are byte and bit. We use prefixes on them 
 | Yi     |       2⁸⁰ | ≈ 1.208 925 820 × 10²⁴ |     | Y      |      10²⁴ |
 
 However, some systems do not use these standards, and that often causes confusion. It is always good to clarify and test before doing things formally.
-
-## Try it
-
-You can view any file and any part of a disk with a binary data viewer. Try a hexadecimal data editor. It allows you to see raw data bytes in hexadecimal. However, you are not able to understand it before you learn the standards, and you will probably corrupt your files if you edit randomly. Remember to back up your files before editing them. Do not edit your disk directly unless you have read the Partitioning and Filesystem chapter.

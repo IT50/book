@@ -46,8 +46,3 @@ Media file formats are not different from the general definition. However, these
 **Lossless codecs**, much like file compression, do lossless conversion between data and analog media. However, they are much more efficient than universal file compression because they are specialized for a particular media type. Examples include Portable Network Graphic (PNG) and Free Lossless Audio Codec (FLAC).
 
 **Lossy codecs** lose information when the media is encoded. They substantially decrease the data sizes while only losing the minimal details that we unlikely see or hear, and the quality is usually configurable in the encoder. Examples include nearly all modern video codecs, JPEG, WebP, MP3 and opus.
-
-## Try it
-
-- Create a Microsoft Word (2007 or later) document. You can open it with Microsoft Word, of course. But did you know that it is just a ZIP archive of its contents? Try to open the file with any archive program and you should see the content, which is encoded in a way that Microsoft Word can understand. You may also be able to understand those code.
-- [[IMPL]] Change the extension on a file and use the properties menu to explore how your operating system chooses a program to open a file when you click on it.
