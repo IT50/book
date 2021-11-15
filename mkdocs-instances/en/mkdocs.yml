@@ -9,25 +9,25 @@ theme:
     - navigation.indexes
 
 nav:
-  - About: /en/index.md
-  - Theory: /en/theory/index.md
+  - About: /en/
+  - Theory:
     - Data:
-      - Overview: /en/theory/data.md
+      - /en/theory/data.md
       - Binary Data: /en/theory/binary-data.md
       - Text Encoding: /en/theory/text-encoding.md
       - File Format: /en/theory/file-format.md
       - Partitioning and Filesystem: /en/theory/partitioning-and-filesystem.md
     - Program:
-      - Overview: /en/theory/program.md
+      - /en/theory/program.md
     - Cryptography:
-      - Overview: /en/theory/cryptography.md
+      - /en/theory/cryptography.md
       - Cryptographic Hash: /en/theory/cryptographic-hash.md
       - Symmetric Cryptogtaphy: /en/theory/symmetric-cryptography.md
       - Asymmetric Cryptography: /en/theory/asymmetric-cryptography.md
       - Public Key Infrastructure: /en/theory/public-key-infrastructure.md
     - Network:
-      - Overview: none
-  - Lab: /en/lab/index.md
+      - none
+  - Lab:
     - POSIX: /en/lab/posix
     - GNU/Linux: /en/lab/gnu-linux
     - macOS: /en/lab/macos
@@ -39,7 +39,6 @@ extra:
     - name: English
       link: /en/
       lang: en
-
     - name: 中文（简体）
       link: /zh-Hans/
       lang: zh
