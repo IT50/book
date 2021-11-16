@@ -4,7 +4,7 @@
 
 We use the `sha256sum` utility to compute the SHA-2 256 hash of a given input.
 
-To hash the text you then type into the terminal, use `sha256sum`. The text is encoded with your terminal’s text encoding and then sent to `sha256sum`. To finish the input, issue ++ctrl+D++. Note that the inclusion of a newline character (produced by ++enter++) will make the input different.
+To hash the text you then type into the terminal, use `sha256sum`. The text is encoded with your terminal’s text encoding and then sent to `sha256sum`. To finish the input, issue ++ctrl+d++. Note that the inclusion of a newline character (produced by ++enter++) will make the input different.
 
 To hash a file, use `sha256sum file_name`.
 
