@@ -28,6 +28,8 @@ gcc -O0 add.c -o add-O0
 gcc -O3 add.c -o add-O3
 ```
 
+In case you wonder, `gcc` and its dependencies are in machine code. Because a computer can only understand its own machine language, anything that is not will ultimately be processed by some code in its own machine language.
+
 You can now run these two programs with `./add-O0` and `./add-O3`. It does not print anything to the terminal.
 
 ## What a binary program looks like
@@ -76,3 +78,5 @@ This one is much shorter. In fact, the only things it does is returning 0. This 
 ## Interpreted program
 
 Python is an easy-to-learn interpreted programming language. Because it is interpreted, it has an interactive shell that lets you type in one line of code at a time and run it as appropriate. Start `python3`, then issue `a = 3`, `b = 5`, `s = a + b`, and `print(s)`. This will not save anything to a file. Use `exit()` to exit.
+
+Again, these lines are ultimately processed by some machine code, in this case `python3` and its dependencies.
