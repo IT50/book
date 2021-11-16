@@ -30,12 +30,22 @@ A **cryptographic hash function** is also:
 | `089f8954a605c945` | `e7ad94f8f1338ce71c0b033d881abafd978cb332a56f1fe2d79082565aafc5ee` |
 | `089f8954a605c946` | `581c858eba8d0c8a9e418f35193ca72536f91f55a7610b7001d0c0330bc8b1b6` |
 
-Hashing is useful when we need to make sure two pieces of data are the same without comparing any meaningful details in them, often because any meaningful details are secrets or the data is too large to send. When it comes to data validation, systems often compare hash values, not the data themselves.
+Hashing is useful when we need to make sure two pieces of data are the same without comparing any meaningful details in them.
 
 Currently, the most commonly used and secure cryptographic hash functions are the SHA-2 and SHA-3 families.
 
-## Insecurities
+## Usages and insecurities
 
-When we use cryptographic hashes to secure things, we rely on their irreversibility. Because ideal cryptographic hash functions are irreversible, the only way to attack is to use brute force, simply trying inputs one by one. The chance of finding the same hash value is so low that it is expected to take very long to find the same hash. Even if one is found, the data may not be the original one, because infinite pieces of data hash to the same value. Therefore, for short data such as passwords, we should consider the possibility of a brute force attack trying to find its plain text. The countermeasure is to use a slower algorithm or more iterations, use different salts, and very importantly, as a user, use long, complex passwords and not use a single pattern for all passwords.
+Hash algorithms can be used in the following ways:
+
+- *Compare hashes only.* Used when any meaningful details are secrets or unnecessary. Password verification.
+
+- *Derive symmetric encryption key.* The hash of the user input is used as the symmetric encryption key, rather than the user input itself.
+
+- *Verify data.* The hash is trusted, and then one computes the hash of the data to verity if it is authentic.
+
+In some cases, a slow hash algorithm is selected to increase security.
+
+Different attacks target different use cases. Some are more interested in producing a certain hash (**collision** or **second preimage**), while some are more interested in getting the input data (**preimage**).
 
 An intelligent finding in the algorithm may make attacking faster than brute force. When such attacks are found, the hash function should be obsoleted.
