@@ -33,6 +33,7 @@ nav:
     - GNU/Linux:
       - en/lab/gnu-linux/index.md
       - Program: en/lab/gnu-linux/program.md
+      - Cryptographic Hash: en/lab/gnu-linux/cryptographic-hash.md
     - macOS: en/lab/macos
     - Windows: en/lab/windows
 
