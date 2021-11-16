@@ -44,7 +44,7 @@ Hash algorithms can be used in the following ways:
 
 - *Verify data.* The hash is trusted, and then one computes the hash of the data to verity if it is authentic.
 
-In some cases, a slow hash algorithm is selected to increase security.
+In some cases, a slow hash algorithm is chosen to improve security.
 
 Different attacks target different use cases. Some are more interested in producing a certain hash (**collision** or **second preimage**), while some are more interested in getting the input data (**preimage**).
 
