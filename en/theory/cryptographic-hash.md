@@ -42,7 +42,7 @@ Hash algorithms can be used in the following ways:
 
 - *Derive symmetric encryption key.* The hash of the user input is used as the symmetric encryption key, rather than the user input itself.
 
-- *Verify data.* The hash is trusted, and then one computes the hash of the data to verity if it is authentic.
+- *Verify data.* The hash is trusted by some other method, and then one computes the hash of the data to verity its authenticity.
 
 In some cases, a slow hash algorithm is chosen to improve security.
 
