@@ -27,7 +27,7 @@ nav:
       - Asymmetric Cryptography: en/theory/asymmetric-cryptography.md
       - Public Key Infrastructure: en/theory/public-key-infrastructure.md
     - Network:
-      - none
+      - en/theory/network.md
   - Lab:
     - en/lab/index.md
     - GNU/Linux:
