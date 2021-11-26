@@ -6,7 +6,7 @@ Before diving into those, here are some concepts that apply to multiple layers.
 
 - *Protocol.* **Protocols** are guidelines of communication in a layer. They specify rules about sending, receiving, and interpreting data.
 
-- *Packet.* When transferring continuous data, it is constructed into many small chunks called **packets**, each with some kind of identification. Two senses of the packet concept exist in diffeent layers. In the transport layer, packets are of a transport layer protocol, and these packets get delivered all across the network. In the data link layer, packets are of a data link protocol communicating two devices.
+- *Packet.* When transferring continuous data, it is constructed into many small chunks called **packets**, each with some kind of identification. Two senses of the packet concept exist in different layers. In the transport layer, packets are of a transport layer protocol, and these packets get delivered all across the network. In the data link layer, packets are of a data link protocol communicating two devices that are directly connected together.
 
 ## The OSI Model
 
