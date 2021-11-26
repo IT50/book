@@ -1,91 +1,59 @@
 # Network
 
-Networks, like data, are built on the concept of abstraction. There are many abstract layers in a network, and this enables professionals to focus on their own layer and not to worry about things happen in other layers.
+Networks, like data, are built on the concept of abstraction. There are many abstract layers in a network. In one layer we only care about communicating the two devices directly connected to each other, while in another layer we have all the machines on the network directly accessible. This layer structure allows for universal compatibility with various technologies, because a technology only belongs to one of the layers.
 
-Since the layers are completely abstract, there can be many possible layer architectures. However, in real life, people expect distinct devices can communicate with each other through the networks. Then here comes the standard. 
+Before diving into those, here are some concepts that apply to multiple layers.
 
-But before diving into the layer stuff, you will need to learn some basic terminology.
+- *Protocol.* **Protocols** are guidelines of communication in a layer. They specify rules about sending, receiving, and interpreting data.
 
-## Internet
+- *Packet.* When transferring continuous data, it is constructed into many small chunks called **packets**, each with some kind of identification. Two senses of the packet concept exist in diffeent layers. In the transport layer, packets are of a transport layer protocol, and these packets get delivered all across the network. In the data link layer, packets are of a data link protocol communicating two devices.
 
-We are not giving a definition but giving a description here.
+## The OSI Model
 
-Internet is a giant "web" connected by physical links and nodes. Links are often some kinds of cables. Nodes can be your computers, your WiFi routers, or servers of your ISP (Internet Service Provider, for example, AT&T).
-
-Nodes send and receive data transferred by links, and most of the time, the data travel through many nodes then eventually arrive at the destination node. 
-
-## Protocol
-
-Protocols are like guidelines about how to communicate. 
-
-How to send the data? How to receive the data? How to read the data? And how to recover corrupted data? 
-
-Protocols are here to solve these questions.
-
-We can't just send a bunch of 0s and 1s to another computer as we want. Distinct devices will need some common protocols to transfer data properly and reliably.
-
-## Packet
-
-When transferring data from a source node to a destination node, people need a structured and easy-understanding way to interact with the data, which are de facto streams of 0s and 1s in the lowest physical level.
-
-Therefore, each layer will store data into many small chunks, and this chuck of data is called "packet". Each layer has different *protocols* to interact with the packets.
-
-Instead of using the same term "packet" in all layers, some academic textbooks will use different terms for the "packet" in different layers to make it more clear. In IT50, for simplicity, we will just use "packet" throughout all layers.
-
-## OSI Model
-
-Some people from [ISO](https://en.wikipedia.org/wiki/International_Organization_for_Standardization) developed a generally accepted standard layer architecture, which is called [OSI model](https://en.wikipedia.org/wiki/OSI_model#Layer_6:_Presentation_Layer).
-
-There are 7 layers in total, listed in the table below.
+[ISO](https://en.wikipedia.org/wiki/International_Organization_for_Standardization) has developed a generally accepted standard layer architecture called the [OSI model](https://en.wikipedia.org/wiki/OSI_model). There are 7 layers in total.
 
 Layer | Name
-----------|-----------
-7th Layer | Application
-6th Layer | Presentation
-5th Layer | Session
-4th Layer | Transport
-3rd Layer | Network
-2nd Layer | Data Link
-Base Layer | Physical
+--|-----------
+7 | Application
+6 | Presentation
+5 | Session
+4 | Transport
+3 | Network
+2 | Data Link
+1 | Physical
 
-But don’t worry, average users will only need to know 2~3 layers. That’s the reason for building such an abstract layer structure!
+But don’t worry about the number of layers here. As a professional user, you only need to learn about three of them: layers 2, 3 and 4. Above these layers, things mostly depend on the implementation of the software, unrelated to the universal knowledge of computer networks. Down below, layer 1 is just hardware.
 
-In this overview page, all layers will be briefly introduced from top to bottom, and some layers will be elaborated in separated pages.
+Below, all layers are briefly introduced from top to bottom, and important layers will be elaborated in separated chapters.
 
 ### Application Layer
 
-This is the superficial layer with which most software interacts. It has many useful protocols which we are using every day, like HTTP, FTP, and DNS. When sending packets, those packets will be passed down to a lower layer.
+This is the layer where useful software interact compatibly. It has the protocols we use every day, such as HTTP, FTP, and DNS.
 
 ### Presentation Layer & Session Layer
 
-In reality, the implementation of these two layer have already been merged into the application layer. Thus, we don't need to care much about these two layers.
+In these two layers, continuous and complete data of the above protocols are constructed from the small packets in the transport layer.
+
+In many practices, these two layers are merged into the application layer.
 
 ### Transport Layer
 
-There are two main protocols in this layer, one is TCP and another is UDP. They have different usage scenarios, and we will elaborate them in separate pages.
+There are two main protocols in this layer: **TCP** and **UDP**, all over IP. They have different usage scenarios, and we will elaborate them in separate chapters.
 
-The packets from the upper application layer are reconstructed into TCP packets or UDP packets in this layer.
+The continuous data from the layers above are constructed into smaller packets in this layer, so they can be individually exchanged, with only the necessary packets resent if some get corrupted or lost.
 
 ### Network Layer
 
-The main protocol in this layer is IP protocol. You may have heard of "IP address", and that "IP" is what we are talking about here.
+The universal protocol in this layer is the **Internet Protocol** (**IP**). You may have heard of an “IP address”, and that “IP” is what we are talking about here.
 
-TCP and UDP packets are reconstructed into IP packets in this layer and sent to destination node.
-
-As we mentioned before, the data will travel many different nodes and links before arriving at the destination node, so there is a need to determine the path. We can't just let our data get lost in the Internet, right?
-
-Therefore, beside the IP protocol, there are many other protocols which are designed to navigate the IP packets in this layer.
+This layer is where a computer network looks like a network (graph) where computers are **nodes** (vertices) and connections are **edges**. A packet will travel many different nodes and edges before arriving at the destination node, and it is up to the network layer to determine the path.
 
 ### Data Link Layer
 
-This layer deals with the nodes that are physically connected together. 
+This layer deals with two nodes that are physically connected together. Two well-known protocols in this layer are Ethernet and Wi-Fi.
 
-Two common protocols in this layer are Ethernet and WiFi.
-
-We don't need to know details of this layer, since it's close to the lowest physical layer. We only need to know how to use it, and that's enough.
+We only need to know a few key features of this layer.
 
 ### Physical Layer
 
-It’s literally the “physical” layer, and as described in Data section of IT50, the physical link in this layer transport 0s and 1s from a source node to a destination node. Some common link media are copper wire, coaxial cable, and fiber-optic cable.
-
-We don't need go into details of this layer, either.
+It’s literally the “physical” layer. Data in this layer is just voltage pulses, light, and electromagnetic waves. Common link media include copper wire, optical fiber, and wireless signals.
