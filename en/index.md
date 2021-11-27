@@ -6,7 +6,7 @@ hide:
 
 # True control comes after knowledge.
 
-This book introduces our everyday computer systems from the perspective of a professional software user rather than a service user. You will be learning the fundamentals that a professional software user needs and then have greater control over the software you use.
+This book introduces **established concepts in the computer ecosystem**, so you can use them to have more control over your own computers and know any implications when interacting beyond.
 
 ## What *is* IT50?
 
@@ -22,6 +22,6 @@ Indeed, driving is a useful skill, and so is computer literacy. We are sure you 
 
 ## Contributing
 
-We are open to accept new contributors and unsolicited commits.
+We are open to accept new contributors and unsolicited contributions.
 
 To submit contributions, use [our GitHub repository](https://github.com/IT50/book).
