@@ -12,7 +12,7 @@ To illustrate some points, we start with an example:
 
 A single digit in the data above represents a **bit**. Its symbol is a lowercase **b** (or for better discrimination, **bit**). A bit has only two possible values, “off” and “on”, and we use 0 and 1 to represent them. The data above contains 64 bits.
 
-A **byte** is 8 bits long. Its symbol is an uppercase **B**. Today's computers know bytes inherently. Computers process a multitude of bytes at once. They also recognize the positions where bytes start. Bytes are usually only used as a whole. Incomplete bytes do not exist.
+A **byte** is 8 bits long. Its symbol is an uppercase **B**. Today's computers know bytes inherently. Computers process a multiple of bytes at once. They also recognize the positions where bytes start. Bytes are usually only used as a whole. Incomplete bytes do not exist.
 
 The example data are these bytes:
 
@@ -36,7 +36,7 @@ You will also read data in bytes rather than in bits. A byte is commonly written
 
 ## Addressing
 
-Similar to how only whole bytes are useful, in certain contexts, only whole **blocks** of some bytes are useful. In such contexts, the total length of raw data is a multitude of a block size, which is commonly chosen to be a power of 2 bytes. In contexts where the concept of block is not helpful, the length of binary data can be any number of bytes.
+Similar to how only whole bytes are useful, in certain contexts, only whole **blocks** of some bytes are useful. In such contexts, the total length of raw data is a multiple of a block size, which is commonly chosen to be a power of 2 bytes. In contexts where the concept of block is not helpful, the length of binary data can be any number of bytes.
 
 An **address** is a number used to locate a byte or block in raw data.
 
