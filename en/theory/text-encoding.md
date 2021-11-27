@@ -20,7 +20,7 @@ Such character encoding scheme has compatibility for those characters that happe
 
 ## Unicode
 
-**Unicode** is the modern-day default text encoding for all languages. It achieves extensibility and compatibility with ISO Latin 1, using the technique of variable character length. Unicode character lengths are always a multitude of a smallest **unit** of 8 or 16 bits. It has a special rule to split continuous binary data into segments of different lengths and then map these sequences to characters. This is even done in a way that makes UTF-8 compatible with ISO Latin 1 for those characters they share.
+**Unicode** is the modern-day default text encoding for all languages. It achieves extensibility and compatibility with ISO Latin 1, using the technique of variable character length. Unicode character lengths are always a multiple of a smallest **unit** of 8 or 16 bits. It has a special rule to split continuous binary data into segments of different lengths and then map these sequences to characters. This is even done in a way that makes UTF-8 compatible with ISO Latin 1 for those characters they share.
 
 Writing systems that have fewer characters use the shorter sequences (for example, 1 or 2 UTF-8 units), and writing systems that have more characters use the longer sequences (for example, 3 UTF-8 units). This minimizes the data size of the encoded text for everyone.
 
