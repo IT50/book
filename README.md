@@ -1,5 +1,5 @@
 # The IT50 Book
-This book introduces our everyday computer systems from the perspective of a professional software user rather than a service user. You will be learning the fundamentals that a professional software user needs and then have greater control over the software you use.
+This book introduces **established concepts in the computer ecosystem**, so you can use them to have more control over your own computers and know any implications when interacting beyond.
 
 As of August 28, 2021, members of IT50 are no longer anonymous.
 
