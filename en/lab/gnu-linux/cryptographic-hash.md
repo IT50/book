@@ -46,4 +46,4 @@ $ sha256sum shattered-2.pdf
 d4488775d29bdef7993367d541064dbdda50d383f89f0aa13a6ff2e0894ba5ff  shattered-2.pdf
 ```
 
-That is the proof of a successful SHA-1 collision attack. Note that this was not obtained using plain brute force; an intelligent finding in the algorithm produced a method much faster than that, but still not instant.
+That is the proof of a successful SHA-1 collision attack. Note that this was not obtained using plain brute force; an intelligent finding in the algorithm produced a method 100,000 times faster, according to the original researchers. This is why SHA-1 should be obsoleted.
