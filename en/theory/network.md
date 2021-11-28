@@ -22,7 +22,7 @@ Layer | Name
 2 | Data Link
 1 | Physical
 
-But don’t worry about the number of layers here. As a professional user, you only need to learn about three of them: layers 2, 3 and 4. Above these layers, things mostly depend on the implementation of the software, unrelated to the universal knowledge of computer networks. Down below, layer 1 is just hardware.
+But don’t worry about the number of layers here. As a professional user, you only need to learn about four of them: layers 2, 3, 4, and 7. At layer 7, we are only going to learn about a few key protocols, because there is no universal knowledge about computer networks here.
 
 Below, all layers are briefly introduced from top to bottom, and important layers will be elaborated in separated chapters.
 
