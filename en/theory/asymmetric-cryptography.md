@@ -37,7 +37,7 @@ However, in the real world it is not practical to know everyone’s public key i
 
 Note that in order to perform an MITM attack, the attacker must be able to intercept and modify all messages between Alice and Bob.
 
-The world currently has a widely used (and *pretty* solid) way to protect the authenticity of public keys shared in-time over an insecure channel, and we will talk about that in the Public Key Infrastructure chapter. If this technique is used, Alice should have noticed that the public key is not authentic.
+The world currently has a widely used (and *pretty* solid) way to protect the authenticity of public keys shared in-time over an insecure channel, and we will talk about that in the Public Key Infrastructure chapter. If this technique is used, Alice should have noticed that the public key she received is not authentic.
 
 The two scenarios above also apply to signing and signature verification. For brevity, only the ideal one is detailed.
 
