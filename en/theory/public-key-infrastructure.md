@@ -30,4 +30,4 @@ From the perspective of verification, trust is established in a chain structure:
 
 A certificate should be **revoked** if its corresponding private key has been compromised, or if the certificate itself was issued improperly. A certificate for a CA should be revoked if the CA fails to behave, and unfortunately this had happened in the past. The revocation process takes some time, and an internet connection is needed to download certificate revocation information from the CA’s **OCSP server**, which may fail. Operating systems also update their local lists, but that takes even longer.
 
-The certificate revocation system is too likely to fail, but it is the best as it can get because revocation is real-time data that needs to be downloaded. For the most rigorous verification, one should always check for revocation.
+The certificate revocation system is too likely to fail, but it is the best as it can get because revocation is issued in an _ad hoc_ fashion. For the most rigorous verification, one should always check for revocation.
