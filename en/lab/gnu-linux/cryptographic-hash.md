@@ -56,16 +56,18 @@ You can find that both `shattered-1.pdf` and `shattered-2.pdf` are valid PDF fil
 
 Many file formats specify unused positions. Data at these positions are ignored when opened by a supported program. However, data at these positions still contribute towards the hash. By changing these parts, an attacker can try to collide the hash after the intended modification is done.
 
-Hashes are short: SHA-1 is only 20 bytes long, and even SHA-2 512 is only 64 bytes long. If we assume that the SHA-2 512 mapping from input to output is “uniformly dense”, then we should expect to find one collision for all the possible 64-byte strings at an unused position. If there are 65 bytes of available space, then we should expect 256 collisions. This turns out to be very feasible since most file formats have way more than enough unused space for this modification. However, the irreversibility and chaosity still prevents an attack from being computed quickly.
+Hashes are short: SHA-1 is only 20 bytes long, and even SHA-2 512 is merely 64 bytes long. If we assume that the SHA-2 512 mapping from input to output is “uniformly dense”, then we should expect to find one collision for all the possible 64-byte strings at an unused position. If there are 65 bytes of available space, then we should expect 256 collisions. This turns out to be very feasible since most file formats have way more than enough unused space for this modification. However, the irreversibility and chaosity still prevents an attack from being computed quickly, and this attack does not play out well on plain text files for the obvious reason that there is no such thing as an unused position.
 
-## Experimenting the one-time password generator
+## Simulating the one-time password generator
 
-The popular one-time password (OTP) specification is based on cryptographic hashes. An OTP program generates a different code every fixed amount of time, and only this code is valid for this period of time. We are going to simulate an OTP system.
+The popular one-time password (OTP) specification is based on cryptographic hashes. An OTP program generates a different code every fixed amount of time, and only this code is valid for this period of time. The OTP is often used to provide a second factor for authentication.
+
+We are going to simulate an OTP procedure.
 
 First, the server determines a **secret** and displays it to the user. Let’s use the secret `He110!` (UTF-8 string) for our example.
 
 Then, assuming the client and the server both have synced their clocks, they calculate how many 30-second periods have passed since 12:00 AM, January 1, 1970 (GMT). Let’s use the value `54646121` for our example.
 
-Then, we combine these two pieces of data and hash it. If we simply concatenate these two strings into `He110!54646121` and use `sha256sum`, then we get the hash `c927ef15ac1d090bac6c3a9860242ddf2170b53aedaaac8f78c7e71cd3c6d11c`. We further reduce this to its first 3 bytes `c927ef` so it’s easy to type within 30 seconds. (This also makes brute force attacks almost impossible.)
+Then, we combine these two pieces of data and hash it. If we simply concatenate these two strings into `He110!54646121` and use `sha256sum`, then we get the hash `c927ef15ac1d090bac6c3a9860242ddf2170b53aedaaac8f78c7e71cd3c6d11c`. We further reduce this to its first 3 bytes `c927ef` so it’s easy to type within 30 seconds. (This also makes it almost impossible to brute force the secret.)
 
-This hash will change after the 30-second period, but as long as the server and client still share the same secret and have their clocks synced, they will continue to generate the same hash. Even if an OTP such as `c927ef` is leaked, a person who doesn’t know the secret cannot continue to produce the same hash as the server. Therefore, it is important to protect OTP secrets, and this is why OTP utilities always hide them.
+This hash will change after the 30-second period, but as long as the server and client still share the same secret and have their clocks synced, they will continue to generate the same hash. If an OTP such as `c927ef` is leaked, a person who doesn’t know the secret cannot continue to produce the same hash as the server. Therefore, it is important to protect OTP secrets, and this is why OTP utilities always hide them.
