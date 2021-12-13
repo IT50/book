@@ -21,7 +21,7 @@ int main() {
 
 Type the code into `add.c` and save the file.
 
-Then, use the following commands to let `gcc` compile the code into two executable binary versions. The first one has optimization disabled while the second one has optimization level set to 3. The outputs are saved to `add-O0` and `add-O3` respectively.
+Then, use the following commands to let `gcc` compile the code into two executable binary versions. The first version has optimization disabled while the second version has optimization level set to 3. The outputs are saved to `add-O0` and `add-O3` respectively.
 
 ``` sh
 gcc -O0 add.c -o add-O0
@@ -34,13 +34,15 @@ You can now run these two programs with `./add-O0` and `./add-O3`. It does not p
 
 ## What a binary program looks like
 
+On your operating system, binary executables are in ELF format.
+
 Use the following `objdump` command to disassemble the `add-O0` binary executable and save the output to `add-O0.dump.txt`.
 
 ``` sh
 objdump -D add-O0 > add-O0.dump.txt
 ```
 
-Then, open the dump. On the author’s system (x86-64, Linux), the executable is in ELF format. The machine code and assembly code of the `main` function we just wrote is provided below.
+Then, open the dump. Now locate the compiled `main` function, the x86-64 outcome of which is also provided below.
 
 ```
 0000000000401106 <main>:
@@ -57,15 +59,13 @@ Then, open the dump. On the author’s system (x86-64, Linux), the executable is
   401129:       c3                      ret
 ```
 
-You don’t have to understand this piece of code.
+The first column is the linear byte address in the file. The hexadecimal data in the second column is the data at that address. The special thing about these data is that they are instructions directly executable by the x86-64 CPU. The last column shows what those hexadecimals stand for, in a more human-readable **assembly language** specific to the CPU architecture. Assembly code is only an alternative representation of the binary instructions; no transformation in the computing procedure is involved.
 
-The first column is the linear address in the file. The hexadecimal data in the second column is the data at that address. The special thing about these data is that they are instructions directly executable by the x86-64 CPU. The last column shows what those hexadecimals stand for, in human-readable **assembly language**, in this case specific to the author’s CPU architecture.
-
-We can see a single `add` instruction with two operands. That instruction indeed does the addition for us, although the result is unused. Note that no variable name is preserved in the compiled program.
+You don’t have to understand this piece of code. However, try to look at how values are manipulated and moved around. We can see a single `add` instruction with two operands. That instruction indeed does the addition for us, although the result is unused. Note that no variable name is preserved in the compiled program.
 
 ## Optimization
 
-The compiler we used, GCC, has optimization functionality. The second version we produced, `add-O3`, is the optimized version. After running `objdump -D add-O3 > add-O3.dump.txt`, we have a look look at its `main` function:
+The compiler we used, GCC, has optimization functionalities. The second version we produced, `add-O3`, is the optimized version. After running `objdump -D add-O3 > add-O3.dump.txt`, we have a look look at its `main` function:
 
 ```
 0000000000401020 <main>:
@@ -73,7 +73,7 @@ The compiler we used, GCC, has optimization functionality. The second version we
   401022:       c3                      ret
 ```
 
-This one is much shorter. In fact, the only things it does is returning 0. This is because GCC found out we left the values unused and decided to not include them, so the program can run faster. This is only one of the many optimization techniques. Generally, optimizations make the code much faster to run, but much harder to read.
+This version is much shorter than the unoptimized one. In fact, the only thing it does is returning 0. This is because GCC found that we left the result unused and further omitted the procedures to produce this result, so the program can run faster but still interact in the same way. This is only one of the many optimization techniques. Generally, optimizations make the code much faster to run, but much harder to read.
 
 ## Interpreted program
 
