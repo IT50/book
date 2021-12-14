@@ -1,6 +1,6 @@
 # Cryptographic Hash
 
-[Theory](../theory/cryptographic-hash.md)
+[Theory](../../theory/cryptographic-hash.md)
 
 ## Computing hashes
 
