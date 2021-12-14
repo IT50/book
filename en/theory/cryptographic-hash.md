@@ -1,5 +1,7 @@
 # Cryptographic Hash
 
+Labs for [GNU/Linux](../lab/cryptographic-hash.md) macOS Windows
+
 ## Hash function
 
 A **hash function** is a function that takes in data of any length and outputs data of a fixed length, called its **hash**.
