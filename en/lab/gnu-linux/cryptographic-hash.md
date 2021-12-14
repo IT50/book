@@ -1,5 +1,7 @@
 # Cryptographic Hash
 
+[Theory](../theory/cryptographic-hash.md)
+
 ## Computing hashes
 
 We use the `sha256sum` utility to compute the SHA-2 256 hash of a given input.
