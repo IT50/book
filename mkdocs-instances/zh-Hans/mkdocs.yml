@@ -28,7 +28,7 @@ nav:
       - 公钥基础设施: zh-Hans/theory/public-key-infrastructure.md
     - 网络:
       - none
-  - 实操:
+  - 试验练习:
     - zh-Hans/lab/index.md
     - GNU/Linux:
       - zh-Hans/lab/gnu-linux/index.md
