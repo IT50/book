@@ -23,7 +23,7 @@ nvme0n1      259:0    0 476.9G  0 disk
 
 In this example, the system has one single disk, accessible at `/dev/nvme0n1`. This disk has a few partitions, each accessible at `/dev/nvme0n1p1`, `/dev/nvme0n1p2`, _etc._
 
-Note that your system may have a different type of disk and use completely different names, like `sda` or `mmcblk0`. You need to use your own names consistently.
+Your system may have a different type of disk and use completely different names, like `sda` or `mmcblk0`. You need to use your own names consistently.
 
 ## Listing partitions
 
@@ -33,7 +33,7 @@ First, let’s use the `fdisk` tool to list the partitions on your disk.
 sudo fdisk /dev/nvme0n1 -l
 ```
 
-Here is an example output. Partitions starting from `/dev/nvme0n1p3` are omitted.
+Here is an example output. Partitions starting from `/dev/nvme0n1p4` are omitted.
 
 ```
 Disk /dev/nvme0n1: 476.94 GiB, 512110190592 bytes, 1000215216 sectors
@@ -180,9 +180,9 @@ $ mount
 
 ### Deletion
 
-As previously noted, filesystems delete files by marking the corresponding space as unused. Then, it is only a matter of time and chance whether or not that space will be overwritten by new data. Try creating a new file with some unique content, deleting it, and searching the raw filesystem data for that content.
+As previously noted, filesystems delete files by marking the corresponding space as unused. Then, it is only a matter of time and chance whether or not that space will be overwritten by new or growing files.
 
-First, you need determine which filesystem you want to test. This example uses `/dev/nvme0n1p3`, which is mounted at `/`. Then,  a file `flag` is created somewhere inside that filesystem (`~` is inside `/`).
+Try creating a new file with some unique content, deleting it, and searching the raw filesystem data for that content. First, you need determine which filesystem you want to test. This example uses `/dev/nvme0n1p3`, which is mounted at `/`. Then,  a file `flag` is created somewhere inside that filesystem (`~` is inside `/`).
 
 ``` sh
 cd ~
