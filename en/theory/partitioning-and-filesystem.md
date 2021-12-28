@@ -1,5 +1,7 @@
 # Partitioning and Filesystem
 
+Labs for [GNU/Linux](../../lab/gnu-linux/partitioning-and-filesystem) · macOS · Windows
+
 Remember from where we introduced data, the space on your disk is just a singular series of 0’s and 1’s, and they can *only* be 0’s and 1’s. That is to say, the space allocation information is stored just in these 0’s and 1’s. Some parts of your disk store your files, and some parts store the space allocation information, all in the same, continuous, indifferent series of 0’s and 1’s of your disk. In this chapter, we set up levels of abstractions over this indifferent data to enable the familiar concepts we know.
 
 There are two types of allocation: **partitioning** and **filesystem**. Partitioning is quite rudimentary: it defines usable segments of your disk space. Then, typically, a filesystem is established in each partition to contain files, usually in a tree structure.
