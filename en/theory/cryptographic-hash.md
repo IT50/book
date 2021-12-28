@@ -1,6 +1,6 @@
 # Cryptographic Hash
 
-Labs for [GNU/Linux](../../lab/gnu-linux/cryptographic-hash) macOS Windows
+Labs for [GNU/Linux](../../lab/gnu-linux/cryptographic-hash) · macOS · Windows
 
 ## Hash function
 
