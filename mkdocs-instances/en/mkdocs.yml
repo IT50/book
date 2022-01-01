@@ -13,21 +13,21 @@ nav:
   - Theory:
     - en/theory/index.md
     - Data:
-      - en/theory/data.md
+      - Overview: en/theory/data.md
       - Binary Data: en/theory/binary-data.md
       - Text Encoding: en/theory/text-encoding.md
       - File Format: en/theory/file-format.md
       - Partitioning and Filesystem: en/theory/partitioning-and-filesystem.md
     - Program:
-      - en/theory/program.md
+      - Overview: en/theory/program.md
     - Cryptography:
-      - en/theory/cryptography.md
+      - Overview: en/theory/cryptography.md
       - Cryptographic Hash: en/theory/cryptographic-hash.md
       - Symmetric Cryptogtaphy: en/theory/symmetric-cryptography.md
       - Asymmetric Cryptography: en/theory/asymmetric-cryptography.md
       - Public Key Infrastructure: en/theory/public-key-infrastructure.md
     - Network:
-      - en/theory/network.md
+      - Overview: en/theory/network.md
   - Lab:
     - en/lab/index.md
     - GNU/Linux:
