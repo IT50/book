@@ -32,7 +32,7 @@ nav:
     - zh-Hans/lab/index.md
     - GNU/Linux:
       - zh-Hans/lab/gnu-linux/index.md
-      - Program: zh-Hans/lab/gnu-linux/program.md
+      - 密码学哈希: zh-Hans/lab/gnu-linux/cryptographic-hash.md
     - macOS: zh-Hans/lab/macos
     - Windows: zh-Hans/lab/windows
 
