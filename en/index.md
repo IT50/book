@@ -4,7 +4,7 @@ hide:
   - toc
 ---
 
-# True control comes after knowledge.
+# Knowledge at just a right depth
 
 This book introduces **established concepts in the computer ecosystem**, so you can use them to have more control over your own computers and know any implications when interacting beyond.
 
