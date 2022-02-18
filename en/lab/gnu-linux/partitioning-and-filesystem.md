@@ -211,7 +211,7 @@ Note: Do not exit the shell during this experiment, or your shell may write the 
 
 ### Overwriting
 
-Filesystems have different overwriting behavior. Some will overwrite at the original position, while others use a random position. To test this, we use `shred`. It simply does a file overwrite in a mounted filesystem, so the raw operation is still determined by the filesystem.
+Filesystems have different overwriting behavior. Some will overwrite at the original position, while others use an unpredictable position. To test this, we use `shred`. It simply does a file overwrite in a mounted filesystem, so the raw operation is still determined by the filesystem.
 
 Use the following procedure to test. You need to test multiple times to get a reliable result.
 
