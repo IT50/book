@@ -10,9 +10,9 @@ To illustrate some points, we start with an example:
 
 ## Bit and Byte
 
-A single digit in the data above represents a **bit**. Its symbol is a lowercase **b** (or for better discrimination, **bit**). A bit has only two possible values, “off” and “on”, and we use 0 and 1 to represent them. The data above contains 64 bits.
+A single digit in the data above represents a **bit**. A bit has only two possible values, “off” and “on”, and we use 0 and 1 to represent them. 
 
-A **byte** is 8 bits long. Its symbol is an uppercase **B**. Today's computers know bytes inherently. Computers process a multiple of bytes at once. They also recognize the positions where bytes start. Bytes are usually only used as a whole. Incomplete bytes do not exist.
+A **byte** is 8 bits long. Today's computers know bytes inherently. Computers process a multiple of bytes at once. They also recognize the positions where bytes start. Bytes are usually only used as a whole. Incomplete bytes do not exist.
 
 The example data are these bytes:
 
@@ -34,15 +34,21 @@ or
 
 You will also read data in bytes rather than in bits. A byte is commonly written as a two-digit hexadecimal number that can be directly converted from its binary representation. For example, `0b11100100` will be represented as `0xE4`, where in a certain convention `0b` stands for binary and `0x` stands for hexadecimal.
 
-## Addressing
+## Amount of binary data
 
-Similar to how only whole bytes are useful, in certain contexts, only whole **blocks** of some bytes are useful. In such contexts, the total length of raw data is a multiple of a block size, which is commonly chosen to be a power of 2 bytes. In contexts where the concept of block is not helpful, the length of binary data can be any number of bytes.
+When discussing the amount of binary data, we can say there is a certain number of bits or bytes. The example data above is 8 bytes, or 64 bits.
+
+The symbol for bit is a lowercase **b**. For extra clarity, you can also use **bit**.
+
+The symbol for byte is an uppercase **B** or lowercase **o** (“octet”, a group of eight things).
+
+## Addressing
 
 An **address** is a number used to locate a byte or block in raw data.
 
-**Linear addressing** is a very simple way to give addresses to positions in a piece of data. The starting position has address 0, and the address increases by 1 for every subsequent byte or block.
+**Linear addressing** is a very simple way to addresses a piece of data. The starting position has address 0, and the address increases by 1 for every subsequent byte (or fixed-size **block** of bytes, which we will use in a later chapter.)
 
-In our example, the author dictates to not use blocks, so addresses are given to bytes. These are the addresses and their corresponding data.
+In our example, these are the addresses and their corresponding data.
 
 | Byte address | Data (binary) | Data (hexadecimal) |
 | ------------ | ------------- | ------------------ |
@@ -70,25 +76,51 @@ Note where the binary number bumps to the 7th and 9th place. Because there are s
 
 ## Binary data operations
 
-In most contexts, binary data has a fixed size and does not become longer or shorter. 
+At a low level, binary data has a fixed size and does not become longer or shorter. This way of treating binary data is natural to computer engineers. On binary data, to write means to overwrite, changing a part to the desired content and destroying existing data.
 
-On binary data, to write means to overwrite, changing a part to the desired content and destroying existing data. The time needed to read and write sequentially on any storage device is proportional to the data size.
+If a piece of binary data can become longer or shorter, this usually means it is a file in a [filesystem](./partitioning-and-filesystem.md), a higher level of abstraction which we have not discussed yet.
 
-When the original data is not important, a piece of binary data may be referred to as space.
+When the original data is not important, a piece of binary data may be referred to as space. Without any abstraction performed by the operating system, the disk in your computer appears as a long sequence of bytes.
 
 ## Units
 
-The base units for the amount of data are byte and bit. We use prefixes on them to specify a magnitude. As per **IEC 80000-13** and **SI**:
+The base units for the amount of data are byte and bit. We use **prefixes** on them to specify a **magnitude**. As per **IEC 80000-13** and **SI**:
 
-| Prefix | Magnitude |           (calculated) |     | Prefix | Magnitude |
-| ------ | --------: | ---------------------: | --- | ------ | --------: |
-| Ki     |       2¹⁰ |                = 1 024 |     | k      |       10³ |
-| Mi     |       2²⁰ |            = 1 048 576 |     | M      |       10⁶ |
-| Gi     |       2³⁰ |        = 1 073 741 824 |     | G      |       10⁹ |
-| Ti     |       2⁴⁰ |    = 1 099 511 627 776 |     | T      |      10¹² |
-| Pi     |       2⁵⁰ | ≈ 1.125 899 907 × 10¹⁵ |     | P      |      10¹⁵ |
-| Ei     |       2⁶⁰ | ≈ 1.152 921 505 × 10¹⁸ |     | E      |      10¹⁸ |
-| Zi     |       2⁷⁰ | ≈ 1.180 591 621 × 10²¹ |     | Z      |      10²¹ |
-| Yi     |       2⁸⁰ | ≈ 1.208 925 820 × 10²⁴ |     | Y      |      10²⁴ |
+| IEC 80000-13 Prefix | Magnitude |           (calculated) |
+| ------------------- | --------: | ---------------------: |
+| Ki                  |       2¹⁰ |                = 1 024 |
+| Mi                  |       2²⁰ |            = 1 048 576 |
+| Gi                  |       2³⁰ |        = 1 073 741 824 |
+| Ti                  |       2⁴⁰ |    = 1 099 511 627 776 |
+| Pi                  |       2⁵⁰ | ≈ 1.125 899 907 × 10¹⁵ |
+| Ei                  |       2⁶⁰ | ≈ 1.152 921 505 × 10¹⁸ |
+| Zi                  |       2⁷⁰ | ≈ 1.180 591 621 × 10²¹ |
+| Yi                  |       2⁸⁰ | ≈ 1.208 925 820 × 10²⁴ |
 
-However, some systems do not use these standards, and that often causes confusion. It is always good to clarify and test before doing things formally.
+| SI Prefix | Magnitude |
+| --------- | --------: |
+| k         |       10³ |
+| M         |       10⁶ |
+| G         |       10⁹ |
+| T         |      10¹² |
+| P         |      10¹⁵ |
+| E         |      10¹⁸ |
+| Z         |      10²¹ |
+| Y         |      10²⁴ |
+
+For example, 4 **KiB** = 4 × 2¹⁰ **B** = 4096 **byte** = 32768 **bit**, but 4 **kbit** = 4 × 10³ **bit** = 4000 **bit**.
+
+However, certain systems do not use these standards, causing a lot of confusion. It is always good to clarify and test before doing things formally.
+
+Notably, **JEDEC** is a standard usually confused with SI. What makes things more interesting, some developers (including the Windows operating system) decided to extend JEDEC by filling the empty cells in the table with T, P, E, Z, Y, all of which are similar to SI prefixes. The author’s opinion is to use IEC 80000-13 and SI only, in line with IEEE/ASTM SI 10-1997, which stated “This \[JEDEC\] practice frequently leads to confusion and is deprecated.”
+
+| IEC 80000-13 Prefix | JEDEC Prefix | Magnitude |           (calculated) |
+| ------------------- | ------------ | --------: | ---------------------: |
+| Ki                  | K            |       2¹⁰ |                = 1 024 |
+| Mi                  | M            |       2²⁰ |            = 1 048 576 |
+| Gi                  | G            |       2³⁰ |        = 1 073 741 824 |
+| Ti                  |              |       2⁴⁰ |    = 1 099 511 627 776 |
+| Pi                  |              |       2⁵⁰ | ≈ 1.125 899 907 × 10¹⁵ |
+| Ei                  |              |       2⁶⁰ | ≈ 1.152 921 505 × 10¹⁸ |
+| Zi                  |              |       2⁷⁰ | ≈ 1.180 591 621 × 10²¹ |
+| Yi                  |              |       2⁸⁰ | ≈ 1.208 925 820 × 10²⁴ |
