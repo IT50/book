@@ -34,14 +34,6 @@ or
 
 You will also read data in bytes rather than in bits. A byte is commonly written as a two-digit hexadecimal number that can be directly converted from its binary representation. For example, `0b11100100` will be represented as `0xE4`, where in a certain convention `0b` stands for binary and `0x` stands for hexadecimal.
 
-## Amount of binary data
-
-When discussing the amount of binary data, we can say there is a certain number of bits or bytes. The example data above is 8 bytes, or 64 bits.
-
-The symbol for bit is a lowercase **b**. For extra clarity, you can also use **bit**.
-
-The symbol for byte is an uppercase **B** or lowercase **o** (“octet”, a group of eight things).
-
 ## Addressing
 
 An **address** is a number used to locate a byte or block in raw data.
@@ -81,6 +73,14 @@ At a low level, binary data has a fixed size and does not become longer or short
 If a piece of binary data can become longer or shorter, this usually means it is a file in a [filesystem](./partitioning-and-filesystem.md), a higher level of abstraction which we have not discussed yet.
 
 When the original data is not important, a piece of binary data may be referred to as space. Without any abstraction performed by the operating system, the disk in your computer appears as a long sequence of bytes.
+
+## Amount of binary data
+
+When discussing the amount of binary data, we can say there is a certain number of bits or bytes. The example data above is 8 bytes, or 64 bits.
+
+The symbol for bit is simply **bit**, but a lowercase **b** is also often used.
+
+The symbol for byte is an uppercase **B** or lowercase **o** (“octet”, a group of eight things).
 
 ## Units
 
